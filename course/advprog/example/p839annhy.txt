@@ -1,0 +1,138 @@
+//======================================
+// Problem: 839 - Not so Mobile
+// Author: Hsing-Yen Ann
+// Date: 2006/03/07
+//======================================
+
+#include <iostream>
+#include <string>
+#include <vector>
+#include <algorithm>
+
+using namespace std;
+
+  // 讀入之資料
+  vector<int> dL, dR, wL, wR, childL, childR;
+
+  int sum(int idx) {
+    // 左右 node 的重量
+    int result = wL[idx] + wR[idx];
+    
+    // 左右 sub-tree 的重量
+    if (childL[idx] != -1) {
+      result += sum(childL[idx]);
+    }
+    if (childR[idx] != -1) {
+      result += sum(childR[idx]);
+    }
+    
+    return result;
+  }
+
+  bool isBalance(int idx) {
+    int w1 = wL[idx];
+    int w2 = wR[idx];
+    int d1 = dL[idx];
+    int d2 = dR[idx];
+    if (childL[idx] != -1) {
+      if (!isBalance(childL[idx])) {
+        return false;
+      }
+      w1 += sum(childL[idx]);
+    }
+    if (childR[idx] != -1) {
+      if (!isBalance(childR[idx])) {
+        return false;
+      }
+      w2 += sum(childR[idx]);
+    }
+
+    if (w1 * d1 == w2 * d2) {
+      return true;
+    }
+    else {
+      return false;
+    }
+  }
+
+  void readData(int idx) {
+    int w1;
+    int d1;
+    int w2;
+    int d2;
+    cin >> w1;
+    cin >> d1;
+    cin >> w2;
+    cin >> d2;
+    
+    dL[idx] = d1;
+    dR[idx] = d2;
+    wL[idx] = w1;
+    wR[idx] = w2;
+
+    // add left child
+    if (w1 == 0) {
+      int leftIdx = dL.size();
+      childL[idx] = leftIdx;
+      
+      dL.push_back(-1);
+      dR.push_back(-1);
+      wL.push_back(0);
+      wR.push_back(0);
+      childL.push_back(-1);
+      childR.push_back(-1);
+      
+      readData(leftIdx);
+    }
+    
+    // add right child
+    if (w2 == 0) {
+      int rightIdx = dL.size();
+      childR[idx] = rightIdx;
+      
+      dL.push_back(-1);
+      dR.push_back(-1);
+      wL.push_back(0);
+      wR.push_back(0);
+      childL.push_back(-1);
+      childR.push_back(-1);
+      
+      readData(rightIdx);
+    }
+  }
+
+int main() {
+
+  // Read the number of cases
+  int count;
+  cin >> count;
+
+  do {
+    count--;
+    
+    dL.clear();
+    dR.clear();
+    wL.clear();
+    wR.clear();
+    childL.clear();
+    childR.clear();
+    
+    dL.push_back(-1);
+    dR.push_back(-1);
+    wL.push_back(0);
+    wR.push_back(0);
+    childL.push_back(-1);
+    childR.push_back(-1);
+    
+    readData(0);
+
+    bool balance = isBalance(0);
+    cout << (balance ? "YES" : "NO") << endl;
+    if (count > 0) {
+      cout << endl;
+    }
+  } while (count > 0);
+
+  return 0;
+}
+

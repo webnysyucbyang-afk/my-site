@@ -1,0 +1,40 @@
+import java.io.*; 
+import java.util.Scanner; 
+
+/** 
+ * Problem 100: The 3n + 1 problem
+ *
+ * Special Note: 
+ *  1. Your class name should be Main 
+ *  2. Your class should be located in default package 
+ */ 
+public class Main { 
+
+  public static int cycleLength(long n) { 
+    int count = 1; 
+    while (n > 1) { 
+      count++; 
+      n = ((n & 1) == 0) ? (n >> 1) : (3 * n + 1); 
+    } 
+    return count; 
+  } 
+
+  public static void main(String[] args) throws IOException { 
+    Scanner cin = new Scanner(System.in); 
+    PrintStream cout = System.out; 
+
+    while (cin.hasNextInt()) { 
+      int a = cin.nextInt(); 
+      int b = cin.nextInt(); 
+
+      int maxCycleLen = 0; 
+      int sIdx = Math.min(a, b); 
+      int eIdx = Math.max(a, b); 
+      for (int i = sIdx; i <= eIdx; i++) { 
+        maxCycleLen = Math.max(maxCycleLen, cycleLength(i)); 
+      } 
+
+      cout.printf("%d %d %d\n", a, b, maxCycleLen); 
+    } 
+  } 
+}

@@ -1,0 +1,38 @@
+/* author: Chang-Biau Yang 
+   date: Feb. 10, 2021   
+   purpose: to solve problem 100: the 3n+1 problem
+   language: C
+*/
+#include <stdio.h>
+void main()
+{
+  int first, last;
+  long  a,b,i,n, count,max;
+  
+  while (scanf("%d %d", &a,&b) != EOF) {
+    if (a>b){
+      first=b;
+      last=a;
+    }
+    else {
+      first=a;
+      last=b;
+    }
+    max=0;
+    for (i=first; i<=last; i++) {
+      n=i;
+      count=1;
+      while (n > 1) {   // It may overflow, if it is set to n != 1
+      count++ ;
+      if (n % 2 ==0)
+        n = n >> 1;     // n= n/2;
+      else
+        n = n*3+1;
+      }
+      if (count > max)
+        max=count;
+    }
+    printf("%d %d %d\n",a,b,max);
+  }
+}
+

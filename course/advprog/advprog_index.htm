@@ -1,0 +1,787 @@
+<html>
+
+<script language="JavaScript">
+
+<!--// 
+
+
+
+logo_1 = new Image(210,40);
+
+logo_1.src = "back1.gif";
+
+logo_2 = new Image(210,40);
+
+logo_2.src = "back2.gif";
+
+
+
+logo_3 = new Image(240,40);
+
+logo_3.src = "backmenu1.gif";
+
+logo_4 = new Image(240,40);
+
+logo_4.src = "backmenu2.gif";
+
+
+
+logo_5 = new Image(147,40);
+
+logo_5.src = "previous1.gif";
+
+logo_6 = new Image(147,40);
+
+logo_6.src = "previous2.gif";
+
+
+
+
+
+function pop_menu(imgDocID,imgObjName) 
+
+{
+
+  document.images[imgDocID].src = eval(imgObjName + ".src");
+
+}
+
+// -->
+
+</script>
+
+
+
+
+
+<head>
+
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+
+<meta name="description" content="中山大學(National Sun Yat-sen Universiyt)資工系選修課，講解解決問題的基本策略與演算法，訓練同學分析與解決問題能力，快速得到可行解法，並可快速撰寫成程式。">
+<meta name="keywords" content="演算法, Algorithms,  程式設計, C/C++, ACM程式設計, 時間複雜度, time complexity, greedy method, divided and conquer, dynamic programming, sorting, 排序 ">
+
+<meta name="GENERATOR" content="Microsoft FrontPage 6.0">
+
+<title>高等程式設計與實作 Advanced Programming and Practices 國立中山大學(National Sun Yat-sen 
+University)資工系</title>
+
+</head>
+
+
+
+<body>
+
+<p align="center"><span style="background-color: #FFFF00"><font size="6" color="#000080" face="標楷體">高等程式設計與實作</font></span></p>
+
+<div align="center">
+
+	<center>
+
+<p align="left">
+<span style="color: rgb(255, 0, 0); font-family: &quot;Times New Roman&quot;; font-size: xx-large; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: justify; text-indent: 0px; text-transform: none; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; white-space: normal; text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial; display: inline !important; float: none;">
+本學期課程，沒選上的同學，若欲加選，請來上課即可(不需要再寫e-mail詢問)</span></p>
+<p align="left"><font size="4">上課時，將不定時進行課中測驗。此項課中測驗成績將做為平時成績；若因故無法舉行期末考時，課中測驗成績亦將採納為期末考成績。</font></p>
+<p align="justify" style="color: rgb(0, 0, 0); font-family: &quot;Times New Roman&quot;; font-size: medium; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-indent: 0px; text-transform: none; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; white-space: normal; text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial;">
+<font color="#FF0000" size="4">請攜帶手機，以便回答課中測驗。</font></p>
+
+<table border="0" cellpadding="12" cellspacing="4" bgcolor="#FFFFFF" width="580" height="245">
+  <tr>
+    <td bgcolor="#00FFFF" width="548" height="114"><blockquote>
+      <p><font size="4">教師: <a href="http://par.cse.nsysu.edu.tw/~cbyang">楊昌彪</a><br>                                                           
+      研究室:&nbsp; 資訊工程學系 EC5020室<br>                                                         
+      電話: 07-5252000 轉 4333&nbsp; <br>                                                          
+      E-mail: <a href="mailto:cbyang@cse.nsysu.edu.tw">cbyang@cse.nsysu.edu.tw</a></font></p>                                                         
+    </blockquote>                      
+    </td>                      
+  </tr>                     
+  <tr>                       
+    <td width="548" bgcolor="#BFDFFF" height="95">                 
+      <blockquote>                 
+        <font size="4">助教:<font LANG="ZH-TW">：楊景翔、李沛謙<br>               
+        研究室： 電資大樓(</font>資訊工程學系) EC5013室</font><font LANG="ZH-TW"><font size="4"><br>                                                         
+        電話(公)：07-525-2000 轉 4345<br>                                                           
+        本課程助教專用E-mail:&nbsp; <a href="mailto:advprog@par.cse.nsysu.edu.tw">advprog@par.cse.nsysu.edu.tw</a></font><font size="3">&nbsp;</font></font>                                              
+      </blockquote>               
+    </td>                      
+  </tr>                      
+</table>                      
+</center></div>                      
+                      
+                      
+        
+<blockquote>                      
+        
+  <blockquote>                      
+        
+    <hr>                      
+        
+  </blockquote>                      
+        
+</blockquote>                      
+        
+                      
+        
+<div align="center"><center>
+	<table border="0" cellpadding="3" cellspacing="0" height="128" width="643">
+		<tr>
+			<td height="1" width="21" bgcolor="#FFFF00">　</td>
+			<td height="1" width="611" bgcolor="#FFFF00">&nbsp; 
+						<font size="5">本課程提供之資料</font></td>
+		</tr>
+		<tr>
+			<td height="1" width="16"><font size="4">
+			<img border="0" src="dot4.gif" width="14" height="15"></font></td>
+			<td height="1" width="611"><font FACE="新細明體" LANG="ZH-TW">
+			<font FACE="Times New Roman" LANG="ZH-TW" size="4">
+			<a href="advprog.doc">課程綱要</a></font></font></td>
+		</tr>
+		<tr>
+			<td height="1" width="16"><font size="4">
+			<img border="0" src="dot4.gif" width="14" height="15"></font></td>
+			<td height="1" width="611">
+			<font size="4" face="Times New Roman"><a href="goal.htm">課程目標</a></font></td>
+		</tr>
+		<tr>
+			<td height="1" width="16"><font size="4">
+			<img border="0" src="dot4.gif" width="14" height="15"></font></td>
+			<td height="1" width="611"><a href="recursion.txt">
+			<font size="4" face="Times New Roman">Recursion 練習題目</font></a></td>
+		</tr>
+		<tr>
+			<td height="1" width="16"><font size="4">
+			<img border="0" src="dot4.gif" width="14" height="15"></font></td>
+			<td height="1" width="611">
+			<font face="Times New Roman" lang="ZH-TW" size="4">
+			<a href="example/example.htm">Online-judge        
+      程式範例</a>(本課程提供)</font></td>
+		</tr>
+		<tr>
+			<td height="1" width="16"><font size="4">
+			<img border="0" src="dot4.gif" width="14" height="15"></font></td>
+			<td height="1" width="611"><a href="contest.htm"><font size="4" face="Times New Roman">
+			本課程程式設計上機考試</font><font face="Times New Roman"><b><font color="#FF0000" size="5">(需一次答對二題或以上)</font></b></font></a><font size="4" face="Times New Roman">&nbsp;&nbsp;&nbsp;&nbsp;
+			</font></td>
+		</tr>
+		<tr>
+			<td height="1" width="16"><font size="4">
+			<img border="0" src="dot4.gif" width="14" height="15"></font></td>
+			<td height="1" width="611">
+			<font face="Times New Roman" lang="ZH-TW" size="4">
+			<a href="http://par.cse.nsysu.edu.tw/~contest/">軟體競賽網頁</a></font></td>
+		</tr>
+		<tr>
+			<td height="1" width="16"><font size="4">
+			<img border="0" src="dot4.gif" width="14" height="15"></font></td>
+			<td height="1" width="611">
+			<a href="http://par.cse.nsysu.edu.tw/~cbyang/course/course_index.htm">
+			<font size="4" face="Times New Roman">考試考古題</font></a></td>
+		</tr>
+		<tr>
+			<td height="1" width="16"><font size="4">
+			<img border="0" src="dot4.gif" width="14" height="15"></font></td>
+			<td height="1" width="611">
+			<font size="4" face="Times New Roman">
+			<a href="report_chuang0609.pdf">資工系95級莊易霖「程式設計心得分享」</a></font></td>
+		</tr>
+		<tr>
+			<td height="1" width="16"><font size="4">
+			<img border="0" src="dot4.gif" width="14" height="15"></font></td>
+			<td height="1" width="611">
+			<font size="4" face="Times New Roman">
+			<a href="report_liucl1103.pdf">資工系100級劉家倫「程式設計心得分享」</a></font></td>
+		</tr>
+		<tr>
+			<td height="1" width="16"><font size="4">
+			<img border="0" src="dot4.gif" width="14" height="15"></font></td>
+			<td height="1" width="611"><font size="4" face="Times New Roman">
+			<a href="report_gpe101011.pdf">資工系101級徐婉貞 GPE 暨 中山大學大學部程式設計 報導(2010.10.11)</a></font></td>
+		</tr>
+		<tr>
+			<td height="1" width="16"><font size="4">
+			<img border="0" src="dot4.gif" width="14" height="15"></font></td>
+			<td height="1" width="611">
+			<font size="4" face="Times New Roman">
+			<a href="report_wongcs1506.pdf">資工系104級翁丞世「大學程式競賽心得」</a></font></td>
+		</tr>
+		<tr>
+			<td height="1" width="16"><font size="4">
+			<img border="0" src="dot4.gif" width="14" height="15"></font></td>
+			<td height="1" width="611">
+			<font size="4" face="Times New Roman">
+			<a href="report_acm_icpc1612.pdf">資工系109級王威寬、牛志煒、張安邦 「國際大學程式競賽」心得</a></font></td>
+		</tr>
+		<tr>
+			<td height="1" width="16"><font size="4">
+			<img border="0" src="dot4.gif" width="14" height="15"></font></td>
+			<td height="1" width="611">
+			<font size="4" face="Times New Roman">
+			<a href="report_cpe1612.pdf">資工系106級陳怡婷、108級黃小雯、107級楊岳錡 「大學程式能力檢定」心得</a></font></td>
+		</tr>
+		<tr>
+			<td height="1" width="16"><font size="4">
+			<img border="0" src="dot4.gif" width="14" height="15"></font></td>
+			<td height="1" width="611">
+			<font size="4" face="Times New Roman">
+			<a href="report_cpe1703.pdf">資工系109級王威寬、107級董濟鈐「大學程式能力檢定」心得</a></font></td>
+		</tr>
+		<tr>
+			<td height="1" width="16"><font size="4">
+			<img border="0" src="dot4.gif" width="14" height="15"></font></td>
+			<td height="1" width="611">
+			<font size="4" face="Times New Roman">
+			<a href="report_cpe1705.pdf">資工系106級楊佩珊、108級廖偉驊「大學程式能力檢定」心得</a></font></td>
+		</tr>
+		<tr>
+			<td height="1" width="16"><font size="4">
+			<img border="0" src="dot4.gif" width="14" height="15"></font></td>
+			<td height="1" width="611">
+			<font size="4" face="Times New Roman">
+			<a href="report_acm_icpc1811.pdf">資工系109級王威寬、110級李洳瑄 「國際大學程式競賽」心得</a></font></td>
+		</tr>
+	</table>
+	</center></div>                      
+        
+                      
+        
+<blockquote>                      
+        
+  <div align="center">
+        
+  <table border="0" cellpadding="3" cellspacing="0" height="128" width="679" id="table1">
+	<tr>
+		<td height="1" width="21" bgcolor="#FFFF00">　</td>
+		<td height="1" width="646" bgcolor="#FFFF00">&nbsp; 
+						<font size="5">本課程習題寫作</font></td>
+	</tr>
+	<tr>
+		<td height="1" width="21"><font size="5">
+		<img border="0" src="dot4.gif" width="14" height="15"></font></td>
+		<td height="1" width="646"><font size="4">
+		<a href="http://cu.nsysu.edu.tw/">連結至網路大學</a></font></td>
+	</tr>
+	<tr>
+		<td height="1" width="21"><font size="5">
+		<img border="0" src="dot4.gif" width="14" height="15"></font></td>
+		<td height="1" width="646">
+		<font size="4" lang="ZH-TW" face="Times New Roman">
+		<a href="http://par.cse.nsysu.edu.tw/~advprog/advprog2025/index.htm">本(113)學年習題寫作</a></font><font face="Times New Roman" lang="ZH-TW"><font color="#FF0000" size="4">(含題目星等列表、題解報告
+	，可據此提升程式能力，亦可檢驗自己的程式能力)</font><font color="#FF0000" size="4" lang="ZH-TW">&nbsp;</font></font></td>
+	</tr>
+	<tr>
+		<td height="1" width="21"><font size="4">
+		<img border="0" src="dot4.gif" width="14" height="15"></font></td>
+		<td height="1" width="646"><span style="background-color: #FFFFFF">
+		<font color="#FF0000" size="4" face="Times New Roman">
+		<a href="style_online.ppt">上台報告格式檔案</a>(Powerpoint檔案）：上台報告者請依此格式</font></span></td>
+	</tr>
+	<tr>
+		<td height="1" width="21"><font size="4">
+		<img border="0" src="dot4.gif" width="14" height="15"></font></td>
+		<td height="1" width="646"><span style="background-color: #FFFFFF">
+		<font color="#FF0000" size="4" face="Times New Roman">
+		<a href="style_online.doc">題解格式檔案</a>（Word檔案）：報告後，再撰寫成Word檔案</font></span></td>
+	</tr>
+	<tr>
+		<td height="1" width="21"><font size="4">
+		<img border="0" src="dot4.gif" width="14" height="15"></font></td>
+		<td height="1" width="646"><font face="Times New Roman">
+		<span style="background-color: #FFFFFF"><a href="acm98.doc">
+		<font size="4">題解範例</font></a></span></font><a href="acm98.doc"><font size="4" face="Times New Roman">(</font><span style="background-color: #FFFFFF; mso-bidi-font-weight:normal; mso-bidi-font-size:10.0pt; font-family:Times New Roman; mso-fareast-font-family:標楷體; mso-font-kerning:1.0pt; mso-ansi-language:EN-US; mso-fareast-language:ZH-TW; mso-bidi-language:AR-SA" lang="EN-US"><font size="4">ACM 
+      Programming Contest World Finals, 1998)</font></span></a></td>
+	</tr>
+	</table>                      
+        
+  <p>　</p>
+        
+  <table border="0" cellpadding="3" cellspacing="0" height="128" width="679" id="table4">
+	<tr>
+		<td height="1" width="21" bgcolor="#FFFF00">　</td>
+		<td height="1" width="646" bgcolor="#FFFF00">&nbsp;<font size="5">本課程 題解 歷史資料</font></td>
+	</tr>
+	<tr>
+		<td height="1" width="21"><font size="5">
+		<img border="0" src="dot4.gif" width="14" height="15"></font></td>
+		<td height="1" width="646"><font face="Times New Roman" size="4">習題</font><font size="4" face="Times New Roman" lang="ZH-TW">寫作討論的題目與題解報告 
+		(除94學年以外，均有錄影)&nbsp;&nbsp;&nbsp; 
+		<a href="http://par.cse.nsysu.edu.tw/~advprog/advprog2006/homework.htm">
+		94學年</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+		<a href="http://par.cse.nsysu.edu.tw/~advprog/advprog2007/homework.htm">
+		95學年</a>&nbsp;&nbsp;&nbsp;
+		<a href="http://par.cse.nsysu.edu.tw/~advprog/advprog2008/homework.htm">
+		96學年</a>&nbsp;&nbsp;
+		<a href="http://par.cse.nsysu.edu.tw/~advprog/advprog2010/homework.htm">
+		98學年</a>&nbsp;&nbsp;
+		<a href="http://par.cse.nsysu.edu.tw/~advprog/advprog2011/homework.htm">99學年</a>&nbsp; 
+		<a href="http://par.cse.nsysu.edu.tw/~advprog/advprog2013/index.htm">101學年</a>&nbsp;&nbsp;&nbsp;
+		<a href="http://par.cse.nsysu.edu.tw/~advprog/advprog2014/index.htm">102學年</a>&nbsp;
+		<a href="http://par.cse.nsysu.edu.tw/~advprog/advprog2015/index.htm">103學年</a>&nbsp;
+		<a href="http://par.cse.nsysu.edu.tw/~advprog/advprog2017/index.htm">105學年</a>&nbsp;
+		<a href="http://par.cse.nsysu.edu.tw/~advprog/advprog2018/index.htm">106學年</a>
+		<a href="http://par.cse.nsysu.edu.tw/~advprog/advprog2019/index.htm">107學年</a>
+		<a href="http://par.cse.nsysu.edu.tw/~advprog/advprog2021/index.htm">
+		109學年</a>&nbsp;
+		<a href="http://par.cse.nsysu.edu.tw/~advprog/advprog2022/index.htm">110學年</a>&nbsp;
+		<a href="http://par.cse.nsysu.edu.tw/~advprog/advprog2023/index.htm">111學年</a>&nbsp;
+		<a href="http://par.cse.nsysu.edu.tw/~advprog/advprog2024/index.htm">
+		112學年</a></font></td>
+	</tr>
+	<tr>
+		<td height="1" width="21"></td>
+		<td height="1" width="646">
+		</td>
+	</tr>
+	<tr>
+		<td height="1" width="21"><font size="4">
+		<img border="0" src="dot4.gif" width="14" height="15"></font></td>
+		<td height="1" width="646">
+		<font size="4" face="Times New Roman" style="color: rgb(0, 0, 0); font-family: &quot;Times New Roman&quot;; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; white-space: normal; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial;">
+		<a href="http://par.cse.nsysu.edu.tw/~advprog/contest_main.htm">模擬比賽結果</a>，</font><span style="color: rgb(0, 0, 0); font-family: &quot;Times New Roman&quot;; font-size: medium; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; white-space: normal; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial; display: inline !important; float: none;">如果想知道你的實力，利用五小時做一做題目，自己計算時間，就可以知道你自己的排名。</span></td>
+	</tr>
+	<tr>
+		<td height="1" width="21"><font size="4">
+		<img border="0" src="dot4.gif" width="14" height="15"></font></td>
+		<td height="1" width="646">
+		<font face="Times New Roman" size="4">ACM</font>程式<font size="4" lang="ZH-TW" face="Times New Roman">設計培訓</font><font color="#FF0000" size="4" lang="ZH-TW" face="Times New Roman">&nbsp;</font><font size="4" lang="ZH-TW" face="Times New Roman">討論的題目與題解報告&nbsp; </font>
+		<font face="Times New Roman" size="4">
+		<a href="http://par.cse.nsysu.edu.tw/~advprog/acmicpc2008/">2008年</a>&nbsp;&nbsp;&nbsp;&nbsp;
+		<a href="http://par.cse.nsysu.edu.tw/~advprog/acmicpc2009/">2009年</a>&nbsp;&nbsp;&nbsp;
+		<a href="http://par.cse.nsysu.edu.tw/~advprog/acmicpc2010/">2010年</a></font></td>
+	</tr>
+	</table>                      
+        
+  <p>　</div>
+	<div align="center">
+	<table border="0" cellpadding="3" cellspacing="0" height="128" width="681" id="table2">
+		<tr>
+			<td height="1" width="21" bgcolor="#FFFF00">　</td>
+			<td height="1" width="649" bgcolor="#FFFF00">&nbsp; 
+						<font size="5">重要外界資源</font></td>
+		</tr>
+		<tr>
+			<td height="1" width="16"><font size="4">
+			<img border="0" src="dot4.gif" width="14" height="15"></font></td>
+			<td height="1" width="649">
+			<a href="http://cpe.cse.nsysu.edu.tw/"><b>
+			<font lang="ZH-TW" face="Times New Roman" size="5">
+			大學程式能力檢定（CPE）</font></b></a></td>
+		</tr>
+		<tr>
+			<td height="1" width="16"><font size="4">
+			<img border="0" src="dot4.gif" width="14" height="15"></font></td>
+			<td height="1" width="649">
+			<b><font face="Times New Roman" lang="ZH-TW" size="5">
+			<a href="https://www.books.com.tw/products/0010926360">參考書籍： 
+			大學程式能力檢定：CPE秘笈 (有題意、解法、程式碼)</a></font></b></td>
+		</tr>
+		<tr>
+			<td height="1" width="16"><font size="4">
+			<img border="0" src="dot4.gif" width="14" height="15"></font></td>
+			<td height="1" width="649">
+			<b>
+			<a href="https://onlinejudge.org/">
+			<font face="Times New Roman" size="5">程式</font><font face="Times New Roman" lang="ZH-TW" size="5">題目庫與線上即時評分        
+      (Online-judge)</font></a></b></td>
+		</tr>
+		<tr>
+			<td height="1" width="16"><font size="4">
+			<img border="0" src="dot4.gif" width="14" height="15"></font></td>
+			<td height="1" width="649">
+			<a href="https://udebug.com/"><font face="Times New Roman" size="4">
+			uDebug 產生</font><font face="Times New Roman" lang="ZH-TW" size="4">測試資料(英文)</font></a></td>
+		</tr>
+		<tr>
+			<td height="1" width="16"><font size="4">
+			<img border="0" src="dot4.gif" width="14" height="15"></font></td>
+			<td height="1" width="649">
+			<a href="https://tfetimes.com/wp-content/uploads/2015/04/ProgrammingPearls2nd.pdf">
+			<font face="Times New Roman" size="4">參考</font><font face="Times New Roman" lang="ZH-TW" size="4">書籍
+			：                            
+            Programming Pearls, second edition by Jon Bentley, Addison-Wesley,                            
+            Inc., 2000（有程式碼）</font></a></td>
+		</tr>
+		<tr>
+			<td height="1" width="16"><font size="4">
+			<img border="0" src="dot4.gif" width="14" height="15"></font></td>
+			<td height="1" width="649"><a href="http://www.cppreference.com/">
+			<font size="4" face="Times New Roman">C/C++&nbsp;     
+      on line help (可以查詢語法、library等）</font></a></td>
+		</tr>
+		<tr>
+			<td height="1" width="16"><font size="4">
+			<img border="0" src="dot4.gif" width="14" height="15"></font></td>
+			<td height="1" width="649">
+			<a href="https://icpc.global/">
+			<font face="Times New Roman" size="4">ICPC (</font><font lang="ZH-TW" face="Times New Roman" size="4">International Collegiate Programming Contest)國際大學程式競賽 世界總決賽網站</font></a></td>
+		</tr>
+		<tr>
+			<td height="1" width="16"><font size="4">
+			<img border="0" src="dot4.gif" width="14" height="15"></font></td>
+			<td height="1" width="649">
+			<font face="Times New Roman" lang="ZH-TW" size="4">
+			<a href="http://projecteuler.net/">Project Euler程式練習(英文，題目非常簡短)</a>&nbsp; </font></td>
+		</tr>
+		</table>
+	</div>
+	<blockquote>
+
+    <blockquote>
+		<blockquote>
+			<blockquote>
+				<blockquote>
+					<hr>
+				</blockquote>
+			</blockquote>
+		</blockquote>
+	</blockquote>
+  </blockquote>
+  <div align="center">
+    <center>                             
+
+                             
+
+<table border="0" cellpadding="12" cellspacing="0" width="584">                             
+
+  <tr>                             
+
+    <td bgcolor="#E8E8E8" width="566" align="left">      
+
+      <p align="justify"><font size="4"><font color="#800000">課程講義</font>（以下講義為Powerpoint檔案，<font color="#FF0000">若需印出時，最好利用印表機（或fine          
+
+      printer軟體）將二頁（或四頁）合併一頁列印</font>。請不要使用Powerpoint所提供的二頁（或四頁），因為效果不好）：</font></p>     
+
+      <p><font size="4">註：此檔案為<font color="#FF0000">Powerpoint 2000</font>所製作，若用其他版本的Powerpoint打開，有些特殊符號可能變形。</font></p>                           
+
+    </td>                         
+
+  </tr>                         
+
+</table>                        
+
+    </center>
+  </div>
+          <div align="center">
+            <center>                      
+
+        
+
+           
+
+           
+
+<table border="0" cellpadding="3" cellspacing="0" height="129" width="528">           
+
+           
+
+  <tr>
+
+           
+
+    <td height="1" width="16"><img src="dot3.gif" width="20" height="20"></td>           
+
+           
+
+    <td height="1" width="488">
+	<font size="4"><span lang="EN-US" style="mso-bidi-font-size: 10.0pt; font-family: Times New Roman; mso-fareast-font-family: 標楷體; mso-ansi-language: EN-US; mso-fareast-language: ZH-TW; mso-bidi-language: AR-SA">
+	<a href="http://bio.cse.nsysu.edu.tw/advprog/adv_video.php">上課錄影 (</a></span><a href="http://bio.cse.nsysu.edu.tw/advprog/adv_video.php"><span style="mso-bidi-font-size: 10.0pt; font-family: Times New Roman; mso-fareast-font-family: 標楷體; mso-ansi-language: EN-US; mso-fareast-language: ZH-TW; mso-bidi-language: AR-SA">不需密碼)</span></a></font></td>           
+
+          
+
+  </tr>
+  <tr>
+
+           
+
+    <td height="1" width="16"></td>           
+
+           
+
+    <td height="1" width="488"></td>           
+
+          
+
+  </tr>
+	<tr>
+
+           
+
+    <td height="1" width="16"><font size="4"><img src="dot3.gif" width="20" height="20"></font></td>           
+
+           
+
+    <td height="1" width="488"><a href="advprog_ppt_printed.pdf"><font size="4">
+	課程講義印列模式&nbsp;&nbsp;&nbsp; pdf for printed</font></a></td>           
+
+          
+
+  </tr>
+  <tr>
+
+           
+
+    <td height="1" width="16"><img src="dot3.gif" width="20" height="20"></td>           
+
+           
+
+    <td height="1" width="488"></td>           
+
+          
+
+  </tr>
+
+           
+
+  <tr>
+
+           
+
+    <td height="1" width="16"><img src="dot3.gif" width="20" height="20"></td>           
+
+           
+
+    <td height="1" width="488">
+	<span style="mso-bidi-font-size: 10.0pt; font-family: Times New Roman; mso-fareast-font-family: 新細明體; mso-ansi-language: EN-US; mso-fareast-language: ZH-TW; mso-bidi-language: AR-SA" lang="EN-US"><a href="chap1introduciton.ppt">
+	<font size="4">Introduction</font></a></span></td>          
+
+          
+
+  </tr>
+
+           
+
+  <tr>
+
+           
+
+    <td height="1" width="16"><img src="dot3.gif" width="20" height="20"></td>           
+
+           
+
+    <td height="1" width="488">
+	<span lang="EN-US" style="mso-bidi-font-size:
+10.0pt;font-family:&quot;Times New Roman&quot;;mso-fareast-font-family:標楷體;color:black;
+mso-ansi-language:EN-US;mso-fareast-language:ZH-TW;mso-bidi-language:AR-SA"><a href="chap2graphs.ppt">
+	<font size="4">Graph    
+      Algorithms</font></a></span></td>           
+
+          
+
+  </tr>
+
+  <tr>
+
+           
+
+    <td height="1" width="16"><img src="dot3.gif" width="20" height="20"></td>           
+
+           
+
+    <td height="1" width="488">
+	<span lang="EN-US" style="mso-bidi-font-size:
+10.0pt;font-family:&quot;Times New Roman&quot;;mso-fareast-font-family:標楷體;mso-ansi-language:
+EN-US;mso-fareast-language:ZH-TW;mso-bidi-language:AR-SA"><a href="chap3greedy.ppt">
+	<font size="4">The   
+      Greedy Method</font></a></span></td>            
+
+          
+
+  </tr>
+
+  <tr>
+
+           
+
+    <td height="1" width="16"><img src="dot3.gif" width="20" height="20"></td>           
+
+           
+
+    <td height="1" width="488">
+	<span lang="EN-US" style="mso-bidi-font-size:
+10.0pt;font-family:&quot;Times New Roman&quot;;mso-fareast-font-family:標楷體;mso-ansi-language:
+EN-US;mso-fareast-language:ZH-TW;mso-bidi-language:AR-SA"><a href="chap4divide.ppt">
+	<font size="4">The   
+      Divide-and-Conquer Strategy</font></a></span></td>            
+
+          
+
+  </tr>
+  <tr>
+
+           
+
+    <td height="1" width="16"><img src="dot3.gif" width="20" height="20"></td>           
+
+           
+
+    <td height="1" width="488">
+	<span lang="EN-US" style="mso-bidi-font-size:
+10.0pt;font-family:&quot;Times New Roman&quot;;mso-fareast-font-family:標楷體;mso-ansi-language:
+EN-US;mso-fareast-language:ZH-TW;mso-bidi-language:AR-SA"><a href="chap5search.ppt">
+	<font size="4">The   
+      Searching Strategies</font></a></span></td>            
+
+          
+
+  </tr>
+  <tr>
+
+           
+
+    <td height="1" width="16"><img src="dot3.gif" width="20" height="20"></td>           
+
+           
+
+    <td height="1" width="488">
+	<span lang="EN-US" style="mso-bidi-font-size:
+10.0pt;font-family:&quot;Times New Roman&quot;;mso-fareast-font-family:標楷體;mso-ansi-language:
+EN-US;mso-fareast-language:ZH-TW;mso-bidi-language:AR-SA"><a href="chap7dynamic.ppt">
+	<font size="4">Dynamic Programming</font></a></span></td>           
+
+          
+
+  </tr>
+  <tr>
+
+           
+
+    <td height="1" width="16"><img src="dot3.gif" width="20" height="20"></td>           
+
+           
+
+    <td height="1" width="488">
+	<span lang="EN-US" style="mso-bidi-font-size:
+10.0pt;font-family:&quot;Times New Roman&quot;;mso-fareast-font-family:標楷體;mso-ansi-language:
+EN-US;mso-fareast-language:ZH-TW;mso-bidi-language:AR-SA"><a href="combine_permute.ppt">
+	<span style="mso-bidi-font-size: 10.0pt; font-family: Times New Roman; mso-fareast-font-family: 標楷體; mso-ansi-language: EN-US; mso-fareast-language: ZH-TW; mso-bidi-language: AR-SA">
+	<font size="4">Permutations 
+      and Combinations</font></span></a></span></td>           
+
+          
+
+  </tr>
+  <tr>
+
+           
+
+    <td height="1" width="16"><img src="dot3.gif" width="20" height="20"></td>           
+
+           
+
+    <td height="1" width="488">
+	<span lang="EN-US" style="mso-bidi-font-size:
+10.0pt;font-family:&quot;Times New Roman&quot;;mso-fareast-font-family:標楷體;mso-ansi-language:
+EN-US;mso-fareast-language:ZH-TW;mso-bidi-language:AR-SA">
+	<font size="4"><a href="library.pptx">C/C++/JAVA 
+      Library</a></font></span></td>           
+
+          
+
+  </tr>
+  <tr>
+
+           
+
+    <td height="1" width="16"><img src="dot3.gif" width="20" height="20"></td>           
+
+           
+
+    <td height="1" width="488"><a href="http://par.cse.nsysu.edu.tw/~contest/library/lib_index.htm">
+	<font size="4" lang="ZH-TW">程式設計競賽公用程式庫（</font><font size="4" lang="ZH-TW" face="Times New Roman">library)</font></a></td>           
+
+          
+
+  </tr>
+  <tr>
+
+           
+
+    <td height="1" width="16"><img src="dot3.gif" width="20" height="20"></td>           
+
+           
+
+    <td height="1" width="488"><a href="contest_lib_tsai1106.ppt">經驗分享與<font size="4" lang="ZH-TW">競賽程式庫（</font><font size="4" lang="ZH-TW" face="Times New Roman">蔡宗翰)</font></a></td>           
+
+          
+
+  </tr>
+  <tr>
+
+           
+
+    <td height="1" width="16"><img src="dot3.gif" width="20" height="20"></td>           
+
+           
+
+    <td height="1" width="488"><a href="lib_code_tsai.pdf">library code 範例<font size="4" lang="ZH-TW">（</font><font size="4" lang="ZH-TW" face="Times New Roman">蔡宗翰)</font></a></td>           
+
+          
+
+  </tr>
+
+          
+
+</table>          
+
+          
+
+            </center>
+          </div>
+
+</blockquote>
+
+
+
+<blockquote>
+
+  <blockquote>
+
+  </blockquote>
+
+</blockquote>
+
+
+
+<blockquote>  
+
+  <hr>  
+
+</blockquote>  
+
+<div align="center"><center>  
+
+  
+
+<table border="0">  
+
+  <tr>  
+
+    <td><a onMouseOver="pop_menu('doc_logo_1','logo_2')" onMouseOut="pop_menu('doc_logo_1','logo_1')" href="../../index.htm"><img src="back1.gif" name="doc_logo_1" border="0" WIDTH="210" HEIGHT="40"></a></td>  
+
+    <td>&nbsp; </td>  
+
+    <td></td>  
+
+    <td><a onMouseOver="pop_menu('doc_logo_3','logo_4')" onMouseOut="pop_menu('doc_logo_3','logo_3')" href="../../main_menu/menu.htm"><img src="backmenu1.gif" name="doc_logo_3" border="0" WIDTH="240" HEIGHT="40"></a></td>  
+
+  </tr>  
+
+  <tr>  
+
+    <td><a href="../../index.htm"><img src="cbyhome.gif" border="0" width="210" height="25"></a></td>  
+
+    <td></td>  
+
+    <td></td>  
+
+    <td><a href="../../main_menu/menu.htm"><img src="cbyindex.gif" border="0" width="240" height="25"></a></td>  
+
+  </tr>  
+
+</table>  
+
+</center></div>  
+
+</body>  
+
+</html>  
+

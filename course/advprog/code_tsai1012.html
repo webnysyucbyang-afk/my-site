@@ -1,0 +1,466 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>無標題文件</title>
+<style type="text/css">
+<!--
+#apDiv1 {
+	position:absolute;
+	left:32px;
+	top:30px;
+	width:267px;
+	height:315px;
+	z-index:1;
+}
+#apDiv2 {
+	position:absolute;
+	left:319px;
+	top:39px;
+	width:343px;
+	height:465px;
+	z-index:2;
+}
+#apDiv3 {
+	position:absolute;
+	left:36px;
+	top:509px;
+	width:267px;
+	height:175px;
+	z-index:3;
+}
+#apDiv4 {
+	position:absolute;
+	left:294px;
+	top:505px;
+	width:387px;
+	height:279px;
+	z-index:4;
+}
+#apDiv5 {
+	position:absolute;
+	left:581px;
+	top:533px;
+	width:416px;
+	height:226px;
+	z-index:5;
+}
+#apDiv6 {
+	position:absolute;
+	left:26px;
+	top:966px;
+	width:303px;
+	height:412px;
+	z-index:6;
+}
+#apDiv7 {
+	position:absolute;
+	left:346px;
+	top:968px;
+	width:291px;
+	height:398px;
+	z-index:7;
+}
+#apDiv8 {
+	position:absolute;
+	left:671px;
+	top:254px;
+	width:275px;
+	height:145px;
+	z-index:8;
+}
+#apDiv9 {
+	position:absolute;
+	left:31px;
+	top:1581px;
+	width:390px;
+	height:728px;
+	z-index:9;
+}
+.t1 {
+	font-size: 36px;
+}
+#apDiv10 {
+	position:absolute;
+	left:352px;
+	top:1592px;
+	width:349px;
+	height:374px;
+	z-index:10;
+}
+#apDiv11 {
+	position:absolute;
+	left:658px;
+	top:964px;
+	width:295px;
+	height:428px;
+	z-index:11;
+}
+#apDiv12 {
+	position:absolute;
+	left:671px;
+	top:42px;
+	width:266px;
+	height:158px;
+	z-index:12;
+}
+#apDiv13 {
+	position:absolute;
+	left:685px;
+	top:1591px;
+	width:378px;
+	height:748px;
+	z-index:13;
+}
+#apDiv14 {
+	position:absolute;
+	left:40px;
+	top:2352px;
+	width:459px;
+	height:423px;
+	z-index:14;
+}
+#apDiv15 {
+	position:absolute;
+	left:407px;
+	top:2362px;
+	width:604px;
+	height:539px;
+	z-index:15;
+}
+-->
+</style>
+</head>
+
+<body>
+<div id="apDiv1">
+  <p class="t1">檔案讀寫：</p>
+  <p>1.重新導向<br />
+    #include&lt;iostream&gt;<br />
+    #include&lt;cstdio&gt;<br />
+    using namespace std;<br />
+    int main()<br />
+    {<br />
+    freopen(&quot;pa.in&quot;,&quot;r&quot;,stdin);<br />
+    freopen(&quot;pa.out&quot;,&quot;w&quot;,stdout);<br />
+    return 0;<br />
+    }</p>
+  <p>適用實機：<br />
+    將標準輸入從螢幕＆鍵盤改到檔案</p>
+</div>
+<div id="apDiv2">
+  <p>2.fstream<br />
+    #include&lt;iostream&gt;<br />
+    #include&lt;fstream&gt;<br />
+    using namespace std;<br />
+    int main()<br />
+    {<br />
+    int q;<br />
+    ofstream fout;<br />
+    fout.open(&quot;test.txt&quot;);<br />
+    fout&lt;&lt;123&lt;&lt;endl;<br />
+    fout.close();<br />
+  <br />
+    ifstream fin;<br />
+    fin.open(&quot;test.txt&quot;);<br />
+    fin&gt;&gt;q;<br />
+    cout&lt;&lt;q&lt;&lt;endl;<br />
+    fin.close();</p>
+  <p>}<br />
+    適用實機：<br />
+    需要同時針對鍵盤與螢幕以及檔案做輸入書出的動作<br />
+  </p>
+</div>
+<div id="apDiv3">
+  <p class="t1">Sort:</p>
+  <p>Case1: 不需要自訂compare函數</p>
+  <p>#include&lt;iostream&gt;<br />
+    #include&lt;algorithm&gt;<br />
+    using namespace std;</p>
+  <p>int main()<br />
+    {<br />
+    int q[]={2,1,4,3,5};<br />
+    sort(q,q+5);<br />
+    }<br />
+  </p>
+</div>
+<div id="apDiv4">
+  <p>Case2: 需要自訂compare函數</p>
+  <p>#include&lt;iostream&gt;<br />
+    #include&lt;algorithm&gt;<br />
+    using namespace std;<br />
+    struct PG<br />
+    {<br />
+    PG(){};<br />
+    PG(int a,string b) : num(a),id(b){}<br />
+    int num;<br />
+    string id;<br />
+    };<br />
+    bool cp(PG a,PG b)<br />
+    {<br />
+    if(a.num == b.num)<br />
+    return a.id &lt; b.id;<br />
+    else return a.num &gt; b.num;<br />
+    //若num一樣 則比較id的字典順序 字典順序小的在前面<br />
+    //否則比較num大小 大的在前面<br />
+    }<br />
+    <br />
+  </p>
+</div>
+<div id="apDiv5">
+  <p>PG miko[5];<br />
+    //以下測試用data--------------------------------------<br />
+    miko[1]=PG(5,&quot;Sona&quot;);<br />
+    miko[2]=PG(4,&quot;Janna&quot;);<br />
+    miko[3]=PG(5,&quot;Morgana&quot;);<br />
+    miko[4]=PG(3,&quot;Tristina&quot;);<br />
+    //-------------------------------------------------<br />
+    int main()<br />
+    {<br />
+    sort(miko+1,miko+5,cp);<br />
+  for(int i=1;i&lt;=4;i++)cout&lt;&lt;miko[i].num&lt;&lt;&quot; &quot;&lt;&lt;miko[i].id&lt;&lt;endl;<br />
+  }
+  <br />
+  </p>
+</div>
+<div id="apDiv6">
+  <p><span class="t1">Queue:</span><br />
+    #include&lt;iostream&gt;<br />
+    #include&lt;queue&gt;<br />
+    using namespace std;<br />
+    int main()<br />
+    {<br />
+    int t;<br />
+    queue&lt;int&gt; PG; //宣告<br />
+    PG.push(123);<br />
+    PG.push(456);<br />
+    cout &lt;&lt; PG.front() &lt;&lt; endl; // queue前端元素<br />
+    PG.pop();   //移除queue前端元素<br />
+    }<br />
+  </p>
+</div>
+<div id="apDiv7">
+  <p><span class="t1">Stack:</span><br />
+    #include&lt;iostream&gt;<br />
+    #include&lt;stack&gt;<br />
+    using namespace std;<br />
+    int main()<br />
+    {<br />
+    int t;<br />
+    stack&lt;int&gt; PG; //宣告<br />
+    PG.push(123);<br />
+    PG.push(456);<br />
+    cout &lt;&lt; PG.top() &lt;&lt; endl; // stack前端元素<br />
+    PG.pop();   //移除stack前端元素<br />
+}<br />
+  </p>
+</div>
+<div id="apDiv8"><span class="t1">容器通用操作</span><br />
+  <br />
+cout &lt;&lt; PG.empty() &lt;&lt; endl;<br />
+//若容器為空 則回傳true<br />
+<br />
+cout &lt;&lt; PG.size() &lt;&lt; endl;<br />
+//回傳容器的大小<br />
+<br />
+PG.clear();<br />
+//清空容器內的元素<br />
+</div>
+<div id="apDiv9">
+  <p><span class="t1">Map:</span><br />
+    #include&lt;iostream&gt;<br />
+    #include&lt;map&gt;<br />
+    using namespace std;<br />
+    int main()<br />
+    {<br />
+    map&lt;string,int&gt; PG;<br />
+    map&lt;string,int&gt;::iterator iter; //指向元素的指標<br />
+  <br />
+    PG[&quot;Eruru&quot;] = 1;<br />
+    PG[&quot;Fate.T.H&quot;] = 2;<br />
+    PG[&quot;Shamaru&quot;] = 3;<br />
+    //以上新增三筆資料<br />
+  <br />
+    cout &lt;&lt; PG[&quot;Fate.T.H&quot;] &lt;&lt; endl;<br />
+  //取得資料的便捷方法<br />
+  //但是此方法若該筆資料不存在,會自動新增<br />
+  //以本例子為例,若&quot;Fate&quot;不存在<br />
+  //則map會插入&quot;Fate&quot;這筆資料<br />
+    <br />
+    iter = PG.find(&quot;Fate.T.H&quot;);<br />
+    cout &lt;&lt; iter-&gt;first &lt;&lt; &quot; &quot; &lt;&lt; iter-&gt;second &lt;&lt; endl;<br />
+    //取得資料的傳統方法<br />
+    <br />
+    if(PG.find(&quot;Eruru&quot;)==PG.end())cout&lt;&lt;&quot;Not exist&quot;;<br />
+    //判斷某筆資料是否存在<br />
+    <br />
+    for(iter=PG.begin(); iter!=PG.end(); ++iter)<br />
+    {<br />
+    cout &lt;&lt; iter-&gt;first &lt;&lt;  &quot; &quot; &lt;&lt; iter-&gt;second &lt;&lt; endl;<br />
+    }<br />
+    //把整個map資料印出<br />
+    <br />
+    system(&quot;pause&quot;);<br />
+  </p>
+<p>}</p>
+</div>
+<div id="apDiv10"><span class="t1">Set:</span><br />
+  <p>#include&lt;iostream&gt;<br />
+    #include&lt;set&gt;<br />
+    using namespace std;<br />
+    int main()<br />
+    {<br />
+    set&lt;int&gt; PG;<br />
+    set&lt;int&gt;::iterator iter; // 指向元素的指標</p>
+  <p> PG.insert(123);<br />
+    PG.insert(456);<br />
+    //插入資料<br />
+  <br />
+    if(PG.find(456)==PG.end())cout&lt;&lt;&quot;Not found&quot;;<br />
+    //檢索元素<br />
+  <br />
+    PG.erase(PG.find(456));<br />
+    //移除元素</p>
+  <p>}<br />
+  </p>
+</div>
+<div id="apDiv11">
+  <p><span class="t1">Priority Queue:</span><br />
+    #include&lt;iostream&gt;<br />
+    #include&lt;queue&gt;<br />
+    using namespace std;<br />
+    struct cp<br />
+    {</p>
+  <p> bool operator()(int &amp;a,int &amp;b)<br />
+    {<br />
+    return a &lt; b ;<br />
+    //在此自行定義compare函數<br />
+    }<br />
+    };<br />
+    int main()<br />
+    {<br />
+    priority_queue&lt;int,vector&lt;int&gt;,cp&gt; PG;<br />
+    PG.push(2);<br />
+    PG.push(5);<br />
+    PG.push(3);<br />
+    PG.push(1);<br />
+    PG.push(4);<br />
+  <br />
+    while(!PG.empty())<br />
+    {<br />
+    cout &lt;&lt; PG.top() &lt;&lt; endl;<br />
+    PG.pop();<br />
+    }</p>
+  <p>}<br />
+  </p>
+</div>
+<div id="apDiv12">
+  <p><em>STL quick reference</em></p>
+  <p><em>by PG @ TFcis</em><br />
+  http://www.eruru.tw</p>
+  <p><em>This work is licensed under a Creative Commons Attribution-NonCommercial-ShareAlike 3.0 Unported License.</em></p>
+</div>
+<div id="apDiv13">
+  <p><span class="t1">String:</span><br />
+    #include&lt;string&gt;<br />
+    #include&lt;iostream&gt;<br />
+    using namespace std;<br />
+    int main()<br />
+    {<br />
+    string q=&quot;Sona Janna Morgana Tristina&quot;;<br />
+    cout &lt;&lt; q.find(&quot;Janna&quot;) &lt;&lt; endl;<br />
+    cout &lt;&lt; (q.find(&quot;Katarina&quot;)==string::npos) &lt;&lt; endl;<br />
+    //find若有找到 則回傳index 若無<br />
+    //
+則回傳string::npos (一個整數)<br />
+    cout &lt;&lt; q.erase(5,4) &lt;&lt; endl;<br />
+    //自index5開始刪除4個字元<br />
+    cout &lt;&lt; q.insert(5,&quot;Jann&quot;) &lt;&lt; endl;<br />
+    //自index5插入Jann<br />
+    cout &lt;&lt; q.substr(0,4)&lt;&lt;endl;<br />
+    //自index0取出長度4的字串<br />
+    cout &lt;&lt; q.replace(q.find(&quot;Tristina&quot;),8,&quot;Sona&quot;) &lt;&lt; endl;<br />
+    // replace(位址,刪除長度,新字串)</p>
+  <p> /*****************************************<br />
+    輸出結果：<br />
+    5<br />
+    1<br />
+    Sona a Morgana Tristina<br />
+    Sona Janna Morgana Tristina<br />
+    Sona<br />
+    Sona Janna Morgana Sona<br />
+    ******************************************/<br />
+    }<br />
+  </p>
+</div>
+<div id="apDiv14">
+  <p class="t1">GCD:  </p>
+  <p>Ver1:<br />
+    #include&lt;iostream&gt;<br />
+    using namespace std;<br />
+    int gcd(int a,int b)<br />
+    {<br />
+    while( (a%=b) &amp;&amp; (b%=a));<br />
+    return a+b;<br />
+    }<br />
+    int main()<br />
+    {<br />
+    int a,b;<br />
+  while(cin &gt;&gt; a &gt;&gt; b)cout &lt;&lt; gcd(a,b) &lt;&lt; endl;<br />
+  }</p>
+  <p>Ver2:<br />
+    #include&lt;iostream&gt;<br />
+    using namespace std;<br />
+    int main()<br />
+    {<br />
+int a,b;<br />
+while(cin&gt;&gt;a&gt;&gt;b)cout&lt;&lt;__gcd(a,b)&lt;&lt;endl;<br />
+}<br />
+    <br />
+  </p>
+</div>
+<div id="apDiv15"><span class="t1">Floyd–Warshall:</span><br />
+ <pre>
+#include < iostream >
+using namespace std;
+int n;
+int map[50][50];
+int backtrace[50][50];
+
+void re(int i, int j)
+{
+    int k = backtrace[i][j];
+    if(!k)return;
+    re(i, k);
+    cout << " => " << k ;
+    re(k, j);
+}
+
+int main()
+{
+	
+    n = 10;
+    for(int i=1; i<=n; i++)
+		for(int j=1; j<=n; j++)
+		    map[i][j]=999999999;
+
+    for(int k=1; k<=n; k++)
+        for(int i=1; i<=n; i++)
+            for(int j=1; j<=n; j++)
+                if(map[i][k] + map[k][j] < map[i][j])
+                {
+                    map[i][j] = map[i][k] + map[k][j];
+                    backtrace[i][j] = k;
+                }
+    cout << "從3到5的最短路徑是: ";
+    cout << "3";
+    re(3,5);
+    cout << " => 5" << endl;
+    cout << "從3到5的最短路徑長度  : " << map[3][5] << endl;
+
+}
+
+</pre>
+</div>
+</body>
+</html>

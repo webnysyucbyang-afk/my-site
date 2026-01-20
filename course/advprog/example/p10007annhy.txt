@@ -1,0 +1,56 @@
+//======================================
+// Problem: 10007 - Count the Trees
+// Author: Hsing-Yen Ann
+// Date: 2006/03/03
+//======================================
+
+#include <iostream>
+#include <string>
+#include <vector>
+#include <algorithm>
+
+using namespace std;
+
+int main() {
+  // Read until (n<=0)
+  while (true) {
+    int n;
+    cin >> n;
+    if (n <= 0) {
+      break;
+    }
+
+    vector<int> result;
+    result.push_back(1);
+    
+    // 計算 
+    for (int i = n+2; i <= 2*n; i++) {
+      for (int j = 0; j < result.size(); j++) {
+        result[j] *= i;
+      }
+      // 處理 overflow 
+      for (int j = 0; j < result.size() - 1; j++) {
+        result[j+1] += (result[j] / 10000);
+        result[j] %= 10000;
+      }
+      int k = result.size()-1;
+      if (result[k] >= 10000) {
+         result.push_back(result[k] / 10000);
+         result[k] %= 10000;
+      }
+    }
+
+    // 印出結果 
+    cout << result[result.size() - 1];
+    for (int i = result.size() - 2; i >= 0; i--) {
+      cout << (result[i] / 1000) % 10;
+      cout << (result[i] / 100) % 10;
+      cout << (result[i] / 10) % 10;
+      cout << (result[i] / 1) % 10;
+    }
+    cout << endl;
+  }
+
+  return 0;
+}
+

@@ -1,0 +1,94 @@
+Recusion 練習題目（請仔細看一看，是否已經融會貫通）：
+1. Let a be an array of integers. Write a recursive C function
+   to compute the sum of the elements of the array.
+   
+Solution :
+   int sum(int a[], int size) //size is the number of elements in array a[]
+   {
+        if(size == 0)
+          return 0;
+        else
+          return a[size-1] + sum(a, size - 1);
+   }
+
+*** wrong solution ***
+
+   int sum(int a[], int size, int s)
+          //size is the number of elements in array a[]
+          // s is the sum of a[], initial value of s is 0
+   {
+        if(size == 0)
+          return s;
+        else {
+          s = s + a[size-1]
+          return  sum(a, size - 1 , s);
+   }
+
+2. Write a recursive C function to determine the maximum
+   of the contents of all the nodes in a binary tree.
+Solution:
+       sturct nodetype {
+           int info;
+           struct nodetype *left;
+           struct nodetype *right;
+       }
+       int max(struct nodetype *p)
+       {
+          int a,b;
+
+          if(p==NULL)
+             return(-MAXINT); //MAXINT is infinite
+          else {
+            a=max(p->left);
+            b=max(p->right);
+            if (a>=b)
+               return (p->info >= a ? p->info : a)
+            else
+               return (p->info >= b ? p->info : b)
+           }
+       }   /* end of max() */
+
+*** wrong solution ***
+
+       sturct nodetype {
+           int info;
+           struct nodetype *left;
+           struct nodetype *right;
+       }
+       int max(struct nodetype *p)
+       {
+          if(p==NULL)
+             return(-MAXINT); //MAXINT is infinite
+          else {
+            if (max(p->left) >= max(p->right)
+               return (p->info >= max(p->left) ? p->info : max(p->left))
+            else
+               return (p->info >= max(p->right) ? p->info : max(p->right))
+           }
+       }   /* end of max() */
+
+3. Write a recursive} C function to determine if a binary
+   tree is complete. Note that in a complete binary tree,
+   all leaves are at the same level.
+
+Solution:
+       sturct nodetype {
+           int info;
+           struct nodetype *left;
+           struct nodetype *right;
+       }
+       int complete(struct nodetype *p)
+      /* return depth of the tree if it is complete
+         return -1 if it is not */
+      {
+         int leftdepth;
+
+         if(p==NULL)
+            return(0);      /* NULL tree is complete with depth 0 */
+         leftdepth=complete(p->left);
+         rightdepth=complete(p->right);
+         if ((leftdepth==rightdepth) && (leftdepth != -1))
+            return(leftdepth+1);        /* complete subtree */
+         else
+            retrun(-1);          /* not compelte */
+      }    /* end of complete() */

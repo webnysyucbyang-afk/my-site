@@ -1,0 +1,64 @@
+//======================================
+// Problem: 100 - The 3n + 1 problem
+// Author: Hsing-Yen Ann
+// Date: 2006/03/19
+//======================================
+
+#include <iostream>
+#include <string>
+#include <vector>
+#include <algorithm>
+
+using namespace std;
+
+  // compute the cycle length of n
+  int cycle_length(long n) {
+    int cl = 1;
+    
+    while (n > 1) {
+      cl++;
+      if (n % 2 == 0) {
+        n >>= 1;
+      }
+      else {
+        n = 3 * n + 1;
+      }
+    }
+
+    return cl;
+  }
+
+int main() {
+  // 每次計算的範圍
+  int sIndex, eIndex;
+  int oriS, oriE;
+  
+  // Read until EOF
+  while (cin >> sIndex) {
+    cin >> eIndex;
+
+    // 保留原來的輸入順序
+    oriS = sIndex;
+    oriE = eIndex;
+    
+    // 處理 sIndex > eIndex 的狀況
+    if (sIndex > eIndex) {
+      int tmp = sIndex;
+      sIndex = eIndex;
+      eIndex = tmp;
+    }
+
+    int maxCycleLen = 0;
+    for (int i = sIndex; i <= eIndex; i++) {
+      int cc = cycle_length(i);
+      if (cc > maxCycleLen) {
+        maxCycleLen = cc;
+      }
+    }
+
+    cout << oriS << " " << oriE << " " << maxCycleLen << endl;
+  }
+
+  return 0;
+}
+
