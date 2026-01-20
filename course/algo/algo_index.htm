@@ -1,0 +1,501 @@
+<html>
+<script language="JavaScript">
+<!--// 
+
+logo_1 = new Image(210,40);
+logo_1.src = "back1.gif";
+logo_2 = new Image(210,40);
+logo_2.src = "back2.gif";
+
+logo_3 = new Image(240,40);
+logo_3.src = "backmenu1.gif";
+logo_4 = new Image(240,40);
+logo_4.src = "backmenu2.gif";
+
+logo_5 = new Image(147,40);
+logo_5.src = "previous1.gif";
+logo_6 = new Image(147,40);
+logo_6.src = "previous2.gif";
+
+
+function pop_menu(imgDocID,imgObjName) 
+{
+  document.images[imgDocID].src = eval(imgObjName + ".src");
+}
+// -->
+</script>
+
+
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<meta name="description" content="中山大學(National Sun Yat-sen Universiyt)資工系碩士班必修課之一，講授演算法的基本原理與設計策略，訓練學生設計演算法解決問題的能力，並使其熟悉演算法的分析方法，俾使學生能實際設計解題的方法。">
+<meta name="keywords" content="演算法, Algorithms,  程式設計, 時間複雜度, time complexity, greedy method, divided and conquer, prune and search, approximate, dynamic programming, sorting, 排序 ">
+<meta name="GENERATOR" content="Microsoft FrontPage 6.0">
+<title>演算法設計與分析, 中山大學楊昌彪,&nbsp; Design and Analysis of Algorithms, National Sun 
+Yat-sen University</title>
+</head>
+
+<body>
+<div align="center"><center>
+
+<table border="0" cellpadding="0" cellspacing="0">
+  <tr>
+    <td><img src="title1.jpg" WIDTH="249" HEIGHT="74"></td>
+    <td><img src="title2.jpg" WIDTH="248" HEIGHT="74"></td>
+  </tr>
+  <tr>
+    <td><img src="title3.jpg" WIDTH="249" HEIGHT="73"></td>
+    <td><img src="title4.jpg" WIDTH="248" HEIGHT="73"></td>
+  </tr>
+</table>
+</center>
+	<p align="justify"><font size="4">上課時，將不定時進行課中測驗。此項課中測驗成績將做為平時成績；若因故無法舉行期末考時，課中測驗成績亦將採納為期末考成績。</font></p>
+	<p align="justify">
+	<font color="#FF0000" size="4">請攜帶手機，以便回答課中測驗(詳見 網路大學)</font></div>
+
+<div align="center">
+ 
+<div id="google_translate_element"></div><script>
+function googleTranslateElementInit() {
+  new google.translate.TranslateElement({
+    pageLanguage: 'zh-TW'
+  }, 'google_translate_element');
+}
+</script><script src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>          
+           
+           
+<table border="0" cellpadding="3" cellspacing="0" height="129" width="690" id="table2">           
+           
+  <tr>
+           
+    <td height="1" width="16">
+	<img border="0" src="dot_apple2.gif" width="35" height="38"></td>           
+           
+    <td height="1" width="642">
+	<font lang="ZH-TW" face="Times New Roman" size="4"><font color="#FF00FF">
+	修課必備條件：CPE一次二題；或 Online Judge 題目庫二星以上至少五題於開學二週內完成。題目見：「軟體設計競賽題庫與線上即時評分 
+	(Online-judge)」，並提出ID與題號，作為查驗。未完成者，不得修此課程</font>。&nbsp; 
+	<a href="http://par.cse.nsysu.edu.tw/~cbyang/course/advprog/advprog_index.htm">寫作詳情</a>&nbsp;
+	</font><font lang="ZH-TW" face="細明體">&nbsp;星等列表參見該網頁「<font lang="ZH-TW" face="Times New Roman" size="4">本(113)學年習題寫作」</font></font></td>          
+          
+  </tr>
+           
+  <tr>   
+           
+    <td height="1" width="16">
+	<img border="0" src="dot_apple2.gif" width="35" height="38"></td>           
+           
+    <td height="1" width="642"><a HREF="algo.doc"><font size="4" LANG="ZH-TW">課程綱要</font></a><font size="4">
+	</font></td>          
+          
+  </tr>   
+  <tr>
+           
+    <td height="1" width="16">
+	<img border="0" src="dot_apple2.gif" width="35" height="38"></td>           
+           
+    <td height="1" width="642"><font size="4">
+	<a href="online_judge.ppt">Online Judge 與 網路大學繳交程式作業方式</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+	<a href="https://elearn.nsysu.edu.tw/#/">連結至網路大學</a></font></td>          
+          
+  </tr>
+  <tr>
+           
+    <td height="1" width="16">
+	<img border="0" src="dot_apple2.gif" width="35" height="38"></td>           
+           
+    <td height="1" width="642"><a href="algo_homework.htm"><font size="4">課本習題</font></a></td>          
+          
+  </tr>
+	<tr>
+           
+    <td height="1" width="16">
+	<img border="0" src="dot_apple2.gif" width="35" height="38"></td>           
+           
+    <td height="1" width="642"><font size="4"><a href="algo_report.htm">term         
+      project實施要點</a>&nbsp;&nbsp;<a href="https://www.youtube.com/watch?v=Kh3tjfp8bow">講解影片</a> 
+	(27:54秒開始)&nbsp;&nbsp; <a href="Voronoi_evaluate_first.pdf">第一次評分標準</a>&nbsp;&nbsp;&nbsp;
+	<a href="Voronoi_evaluate_second.pdf">第二次評分標準</a></font></td>          
+          
+  </tr>
+	<tr>
+           
+    <td height="1" width="16">
+	<img border="0" src="dot_apple2.gif" width="35" height="38"></td>           
+           
+    <td height="1" width="642"><a HREF="reason.doc"><font LANG="ZH-TW" size="4">修習演算法的理由</font></a></td>          
+          
+  </tr>
+	<tr>
+           
+    <td height="1" width="16">
+	<img border="0" src="dot_apple2.gif" width="35" height="38"></td>           
+           
+    <td height="1" width="642"><a href="errata_book.doc"><font size="4">教科書勘誤表<font face="Times New Roman">(</font>作習題前先看一下）</font></a></td>          
+          
+  </tr>
+	<tr>
+           
+    <td height="1" width="16">
+	<img border="0" src="dot_apple2.gif" width="35" height="38"></td>           
+           
+    <td height="1" width="642"><a href="http://par.cse.nsysu.edu.tw/~cbyang/course/course_index.htm">
+	<font size="4">考試考古題</font></a></td>          
+          
+  </tr>
+	<tr>
+           
+    <td height="1" width="16">
+	<img border="0" src="dot_apple2.gif" width="35" height="38"></td>           
+           
+    <td height="1" width="642">
+					<a href="http://www.fortran-2000.com/ArnaudRecipes/Cstd/">C Library Reference Guide (可以查詢 C 語法、library等)</a></td>          
+          
+  </tr>
+	<tr>
+           
+    <td height="1" width="16">
+	<img border="0" src="dot_apple2.gif" width="35" height="38"></td>           
+           
+    <td height="1" width="642">
+					<a href="http://www.cppreference.com/">C++&nbsp; on line 
+					help (可以查詢 C++ library等)</a></td>          
+          
+  </tr>
+	<tr>
+           
+    <td height="1" width="16">
+	<img border="0" src="dot_apple2.gif" width="35" height="38"></td>           
+           
+    <td height="1" width="642">
+	<font size="4">
+	<a href="http://par.cse.nsysu.edu.tw/~cbyang/course/advprog/advprog_index.htm">加強程式設計能力，或檢驗自己程式能力之等級</a>(</font><font size="4" color="#FF0000">修習本課程應具至少兩顆星之程式能力) 
+	</font></td>          
+          
+  </tr>
+	          
+</table>          
+          
+</div>
+       
+<hr>       
+<div align="center">       
+       
+<table border="0" cellpadding="12" cellspacing="0" width="710" height="138">       
+  <tr>
+    <td bgcolor="#00FFFF" width="686" height="114"><blockquote>       
+      <p><font size="3">
+		<img src="dog.gif" align="right" width="120" height="113"></font><font face="Times New Roman"><font size="4">Instructor:</font><font size="2">                 
+      </font></font><a href="http://par.cse.nsysu.edu.tw/~cbyang/"><font size="3">楊昌彪</font></a></p>                                                       
+      <p><font face="Times New Roman"><font size="3">                           
+      Office:&nbsp; </font><span style="mso-bidi-font-size: 10.0pt; mso-ascii-font-family: Times New Roman; mso-hansi-font-family: Times New Roman; mso-bidi-font-family: Times New Roman; mso-ansi-language: EN-US; mso-fareast-language: ZH-TW; mso-bidi-language: AR-SA"></span></font>                                               
+                                
+      <font size="3">電資大樓 </font>
+		<font face="Times New Roman" lang="ZH-TW" size="3">EC</font><font face="Times New Roman" size="3">5020</font><font size="3">室<br>                                      
+      <font face="Times New Roman">                                  
+      Tel: 07-5252000 </font> 轉 <font face="Times New Roman"> 4333&nbsp; <br>                                                
+      E-mail: <a href="mailto:cbyang@cse.nsysu.edu.tw">cbyang@cse.nsysu.edu.tw</a> </font>                                      
+      </font></p>                                                
+    </blockquote>                           
+    </td>                           
+  </tr>
+  <tr>
+                                
+    <td width="686" bgcolor="#BFDFFF" height="95">
+      <blockquote>
+        <font color="#FF0000" LANG="ZH-TW">
+        <strong>助教</strong><font size="2">：</font></font>&nbsp;&nbsp; 李沛謙&nbsp;&nbsp;&nbsp; 
+		陳奕勝<p>                                            
+                              
+      <font lang="ZH-TW" face="Times New Roman" size="3">助教專用e-mail:&nbsp;&nbsp;<a href="mailto:nsysualgoproblem@gmail.com">nsysualgoproblem@gmail.com</a> <br>
+		</font><font lang="ZH-TW" size="3">實驗室：                                                                            
+                                
+      </font>                                               
+                                
+      <font size="3">電資大樓 </font>
+		<font face="Times New Roman" lang="ZH-TW" size="3">EC5013</font><font lang="ZH-TW" size="3">室<br>
+        電話</font><font face="Times New Roman" lang="ZH-TW" size="3">(</font><font lang="ZH-TW" size="3">公</font><font face="Times New Roman" lang="ZH-TW" size="3">)</font><font lang="ZH-TW" size="3">：</font><font face="Times New Roman" lang="ZH-TW" size="3">07-5252000   
+      </font><font lang="ZH-TW" size="3"> 轉 </font>                                                  
+                                
+      <font face="Times New Roman" lang="ZH-TW" size="3"> 4345</font>                                                
+                                
+        </p>
+      </blockquote>
+                                
+    </td>                                              
+                                
+  </tr>
+</table>                           
+</div>                           
+                           
+<hr>                         
+<div align="center"><center>                             
+                             
+<table border="0" cellpadding="12" cellspacing="0" width="652">                             
+  <tr>                             
+    <td bgcolor="#E8E8E8" width="634">      
+      <p align="justify"><font size="3"><font color="#800000">課程講義</font>（以下講義為</font><font size="3" face="Times New Roman">Powerpoint</font><font size="3">檔案，<font color="#FF0000">若需印出時，最好利用印表機（或</font></font><font size="3" face="Times New Roman" color="#FF0000">fine           
+      printer</font><font size="3"><font color="#FF0000">軟體）將二頁（或四頁）合併一頁列印</font>。請不要使用</font><font size="3" face="Times New Roman">Powerpoint</font><font size="3">所提供的二頁（或四頁），因為效果不好）：</font></p>     
+      <p>註<font face="Times New Roman">1</font>：此檔案為<font color="#FF0000">Powerpoint 2000</font>所製作，若用其他版本的<font face="Times New Roman">Powerpoint</font>打開，有些特殊符號可能變形。</p>      
+      <p><font size="3">註</font><font size="3" face="Times New Roman">2</font><font size="3">：若有老師需要利用此講義教學，歡迎下載使用，但請<font color="#FF0000">事先</font></font><font size="3" face="Times New Roman" color="#FF0000">e-mail</font><font size="3"><font color="#FF0000">告知</font>。</font></p>     
+      <p><font size="3" color="#FF0000">註</font><font size="3" color="#FF0000" face="Times New Roman">3</font><font size="3" color="#FF0000">：修本課程同學，請於上課前，自行印出講義</font></p>     
+    </td>                         
+  </tr>                         
+  <tr>                         
+    <td bgcolor="#E8E8E8" width="634">                
+      <p><font face="Times New Roman">
+		<a href="http://bio.cse.nsysu.edu.tw/algo/algo_video.htm">上課錄影 (不需密碼)</a></font></p>
+		<p><a href="algo_ppt_print.pdf">課程講義印列模式&nbsp;&nbsp;&nbsp; pdf for 
+		printed</a> </p>
+		<p><a href="algonote/algo1.ppt"><font face="Times New Roman">Chap 1.                                                   
+    Introduction</font></a><font size="3" face="Times New Roman"><br>                            
+      <a href="algonote/algo2.ppt">Chap 2. The Complexity of Algorithms and the Lower Bounds of                              
+    Problems</a>&nbsp;<br>                           
+      <a href="algonote/algo3.ppt">                          
+      Chap 3. The Greedy Method</a>&nbsp;<br>                            
+      <a href="algonote/algo4.ppt">                          
+      Chap 4. The Divide-and-Conquer Strategy&nbsp;</a><br>                                        
+      <a href="algonote/algo5.ppt">                          
+      Chap 5. Tree Searching Strategy</a><br>                                         
+      <a href="algonote/algo6.ppt">                            
+      Chap 6. Prune-and-Search&nbsp;</a><br>                                          
+      <a href="algonote/algo7.ppt">                                     
+      Chap 7. Dynamic Programming&nbsp;<br>                                             
+      </a>                                       
+      <a href="algonote/algo8.ppt">                          
+      Chap 8.The Theory of NP-Completeness&nbsp;</a><br>                                 
+      <a href="algonote/algo9.ppt">                            
+      Chap 9. Approximation Algorithms&nbsp;<br>                                               
+      </a>                                         
+      <a href="algonote/algo10.ppt">Chap 10. Amortized Analysis&nbsp;<br>                                            
+      </a>                                   
+      <a href="algonote/algo11.ppt">                             
+      Chap 11. Randomized Algorithms&nbsp;</a></font></p>                           
+    </td>                        
+  </tr>                        
+</table>                        
+</center></div>                        
+                        
+<blockquote>                        
+  <blockquote>                        
+  </blockquote>                 
+  <blockquote>                        
+  <hr>                 
+           
+<div align="center"><center>           
+           
+           
+           
+<table border="0" cellpadding="3" cellspacing="0" height="128" width="727" style="border: 1 solid #000000">           
+           
+  <tr>           
+           
+    <td height="9" colspan="2" width="717" bgcolor="#C0C0C0" style="border-style: solid; border-width: 1"><font lang="ZH-TW" color="#FFFFFF">相關連結</font></td>           
+           
+  </tr>           
+           
+  <tr>
+           
+    <td height="1" width="16" style="border-style: solid; border-width: 1">
+	<img src="dot3.gif" width="20" height="20"></td>           
+           
+    <td height="1" width="689" style="border-style: solid; border-width: 1">若對演算法<font face="Times New Roman"><font color="#FF0000">time  
+      complexity</font> 
+      </font> 
+      分析有興趣，且欲更進一步瞭解分析的數學方法，可閱讀下列書籍：<br> 
+      <font face="Times New Roman"> 
+      Mathematics for the Analysis of Algorithms,<br>      
+      D. H. Greene and D. E. Knuth, 1982</font></td>                   
+          
+  </tr>
+           
+  <tr>
+           
+    <td height="1" width="16" style="border-style: solid; border-width: 1"><font face="Times New Roman"><img src="dot3.gif" width="20" height="20"></font></td>           
+           
+    <td height="1" width="689" style="border-style: solid; border-width: 1">
+	<a href="http://archive.li/u7TLi"><font face="Times New Roman">NP-Completeness  
+      Columns by David S. Johnson(</font>附著於<font face="Times New Roman">Journal  
+      of Algorithms, ACM Trans. on Algorithms</font>期刊。開始於 <font face="Times New Roman">1982</font>，探討當年或近年<font face="Times New Roman">NP-complete  
+      </font>相關問題）</a></td>               
+          
+  </tr>
+           
+  <tr>
+           
+    <td height="1" width="16" style="border-style: solid; border-width: 1"><img src="dot3.gif" width="20" height="20"></td>           
+           
+    <td height="1" width="689" style="border-style: solid; border-width: 1">
+	<a href="http://www.csc.kth.se/~viggo/problemlist/"><font face="Times New Roman">A        
+      compendium of NP optimization problems (</font>收集了許多<font face="Times New Roman">NP-complete 
+      </font>      
+      問題，其可能的<font face="Times New Roman">approximation </font> 解法，以及相關論文列表<font face="Times New Roman">)</font></a></td>               
+          
+  </tr>
+  <tr>
+           
+    <td height="1" width="16" style="border-style: solid; border-width: 1"><font face="Times New Roman"><img src="dot3.gif" width="20" height="20"></font></td>           
+           
+    <td height="1" width="689" style="border-style: solid; border-width: 1"><a href="http://www-igm.univ-mlv.fr/~lecroq/string/"><font face="Times New Roman">Exact       
+      String Matching Algorithms (</font>收集數十種字串比對方法，有完整的<font face="Times New Roman">program       
+      code</font>，以及細部執行的情形<font face="Times New Roman">)</font></a></td>          
+          
+  </tr>
+           
+  <tr>
+           
+    <td height="1" width="16" style="border-style: solid; border-width: 1"><font face="Times New Roman"><img src="dot3.gif" width="20" height="20"></font></td>           
+           
+    <td height="1" width="689" style="border-style: solid; border-width: 1"><font face="Times New Roman">
+	<a href="https://www.wiley.com/en-us/Spatial+Tessellations:+Concepts+and+Applications+of+Voronoi+Diagrams,+2nd+Edition-p-9780471986355"><span lang="EN-US" style="mso-fareast-font-family: 新細明體; mso-font-kerning: 1.0pt; mso-ansi-language: EN-US; mso-fareast-language: ZH-TW; mso-bidi-language: AR-SA">Atsuyuki      
+      Okabe,&nbsp;&nbsp;Barry Boots,&nbsp;&nbsp;Kokichi Sugihara      
+      and Sung Nok Chiu</span>&nbsp;         
+      &quot;<span style="mso-bidi-font-size: 10.0pt; mso-hansi-font-family: Times New Roman; mso-bidi-font-family: Times New Roman; mso-ansi-language: EN-US; mso-fareast-language: ZH-TW; mso-bidi-language: AR-SA">Spatial    
+      Tessellations : Concepts and Applications of <font color="#FF0000"> Voronoi 
+      Diagrams</font>&quot;</span></a></font></td>          
+          
+  </tr>
+           
+  <tr>
+           
+    <td height="1" width="16" style="border-style: solid; border-width: 1"><font face="Times New Roman"><img src="dot3.gif" width="20" height="20"></font></td>           
+           
+    <td height="1" width="689" style="border-style: solid; border-width: 1"><span style="mso-bidi-font-size: 10.0pt; mso-hansi-font-family: Times New Roman; mso-bidi-font-family: Times New Roman; mso-ansi-language: EN-US; mso-fareast-language: ZH-TW; mso-bidi-language: AR-SA; background-color: #FFFF00"><a href="voronoi_data.zip"><font face="Times New Roman">Vornoi   
+      Diagram</font>資料結構下載</a>  <font face="Times New Roman"> (</font>若需列印，請在印表機選擇「橫向列印」</span></td>             
+          
+  </tr>
+  <tr>
+           
+    <td height="1" width="16" style="border-style: solid; border-width: 1"><img src="dot3.gif" width="20" height="20"></td>           
+           
+    <td height="1" width="689" style="border-style: solid; border-width: 1">
+	<a href="http://www.oakland.edu/enp/">The Erd&ouml;s (pronounced as 
+	&quot;air dish&quot;) Number Project (Erd&ouml;s 為歷史上發表最多論文之數學家，超過1500篇)</a>&nbsp; </td>          
+          
+  </tr>
+	<tr>
+           
+    <td height="1" width="16" style="border-style: solid; border-width: 1"><img src="dot3.gif" width="20" height="20"></td>           
+           
+    <td height="1" width="689" style="border-style: solid; border-width: 1">
+	<a href="https://en.wikipedia.org/wiki/Turing_Award">Turing Award(電腦科學的諾貝爾獎)</a></td>          
+          
+  </tr>
+  <tr>
+           
+    <td height="1" width="16" style="border-style: solid; border-width: 1"><img src="dot3.gif" width="20" height="20"></td>           
+           
+    <td height="1" width="689" style="border-style: solid; border-width: 1">
+	<a href="http://www.claymath.org/millennium-problems">二十一世紀七大數學難題（其中之一&nbsp; P&nbsp; 
+	vs NP)</a></td>          
+          
+  </tr>
+          
+</table>          
+          
+</center></div>          
+          
+          
+          
+  </blockquote>                 
+  <hr>                 
+           
+<div align="center"><center>           
+           
+           
+           
+<table border="0" cellpadding="3" cellspacing="0" height="129" width="631">           
+           
+  <tr>           
+           
+    <td height="9" colspan="2" width="625" bgcolor="#C0C0C0"><font lang="ZH-TW" color="#FFFFFF">其他參考資料或文章&nbsp;&nbsp; 
+	(取自暨南大學電子報）<br>   
+      （下列文章均為通俗性介紹，適合所有理工背景者閱讀）   
+      </font></td>           
+           
+  </tr>           
+           
+  <tr>   
+           
+    <td height="1" width="16"><img src="dot3.gif" width="20" height="20"></td>           
+           
+    <td height="1" width="598"><a href="article_fourier_int.pdf"><font lang="ZH-TW" size="3" color="#0000FF">週期信號的魔術師（傅立葉級數淺談）<font face="Times New Roman">&nbsp;<font lang="ZH-TW">&nbsp;</font><font size="3">&nbsp;&nbsp; 
+      </font></font>林容杉</font></a></td>          
+          
+  </tr>   
+  <tr>
+           
+    <td height="1" width="16"><img src="dot3.gif" width="20" height="20"></td>           
+           
+    <td height="1" width="598"><font LANG="ZH-TW" size="3">
+	<a href="article_fourier.pdf">傅葉爾<font face="Times New Roman">(Fourier 
+	Transform)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </font>李家同</a></font></td>               
+          
+  </tr>
+  <tr>   
+           
+    <td height="1" width="16"><img src="dot3.gif" width="20" height="20"></td>           
+           
+    <td height="1" width="598"><a href="article_complexity.pdf"><font LANG="ZH-TW" size="3" color="#0000FF">演算法的複雜度</font><font LANG="ZH-TW" size="3" color="#0000FF" face="Times New Roman">-</font><font LANG="ZH-TW" size="3" color="#0000FF">時間與結果的考量</font><font LANG="ZH-TW" size="3" color="#0000FF" face="Times New Roman"><font size="4">&nbsp;</font>&nbsp;&nbsp;  
+      </font><font LANG="ZH-TW" size="3" color="#0000FF">劉炯朗</font><font LANG="ZH-TW" size="3" color="#0000FF" face="Times New Roman">,</font><font LANG="ZH-TW" size="3" color="#0000FF">謝禎鋐</font></a></td>          
+          
+  </tr>   
+  <tr>   
+           
+    <td height="1" width="16"><img src="dot3.gif" width="20" height="20"></td>           
+           
+    <td height="1" width="598"><a href="article_bill_gates.pdf"><font color="#0000FF" LANG="ZH-TW" size="3">比爾蓋茲在大學裏所寫的論文<font face="Times New Roman">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+      </font>林耀鈴</font></a></td>          
+          
+  </tr>   
+  <tr>
+           
+    <td height="1" width="16"><img src="dot3.gif" width="20" height="20"></td>           
+           
+    <td height="1" width="598"><a href="article_ancient.pdf"><font lang="ZH-TW" color="#0000ff" size="3">地球上最早的文字<font face="Times New Roman">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+      </font>李家同</font></a></td>             
+          
+  </tr>
+           
+  <tr>           
+           
+    <td height="1" width="16"><img src="dot3.gif" width="20" height="20"></td>           
+           
+    <td height="1" width="598"><span style="font-family: 新細明體">
+	<a href="article_rsa.pdf">公開金鑰密碼系統的奧妙&nbsp;&nbsp;&nbsp;&nbsp; 張真誠</a></span></td>             
+          
+  </tr>          
+          
+</table>          
+          
+</center></div>          
+          
+          
+          
+  <hr>                
+           
+<div align="center"><center>           
+           
+           
+           
+　</center></div>                
+</blockquote>                
+<div align="center"><center>                
+                
+<table border="0">                
+  <tr>                
+    <td><a onMouseOver="pop_menu('doc_logo_1','logo_2')" onMouseOut="pop_menu('doc_logo_1','logo_1')" href="http://par.cse.nsysu.edu.tw/~cbyang"><img                
+    src="back1.gif" name="doc_logo_1" border="0" WIDTH="210" HEIGHT="40"></a></td>                
+    <td><font face="Times New Roman">&nbsp;</font> </td>                
+    <td></td>                
+  </tr>                
+  <tr>                
+    <td><a href="http://par.cse.nsysu.edu.tw/~cbyang"><font face="Times New Roman"><img src="cbyhome.gif" border="0"                
+    WIDTH="210" HEIGHT="25"></font></a></td>                
+    <td></td>                
+    <td></td>                
+  </tr>                
+</table>                
+</center></div>                
+</body>                
+</html>                
