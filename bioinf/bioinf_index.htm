@@ -1,0 +1,1421 @@
+<html>
+
+
+
+<script language="JavaScript">
+
+
+
+<!--// 
+
+
+
+
+
+
+
+logo_1 = new Image(210,40);
+
+
+
+logo_1.src = "back1.gif";
+
+
+
+logo_2 = new Image(210,40);
+
+
+
+logo_2.src = "back2.gif";
+
+
+
+
+
+
+
+logo_3 = new Image(240,40);
+
+
+
+logo_3.src = "backmenu1.gif";
+
+
+
+logo_4 = new Image(240,40);
+
+
+
+logo_4.src = "backmenu2.gif";
+
+
+
+
+
+
+
+logo_5 = new Image(147,40);
+
+
+
+logo_5.src = "previous1.gif";
+
+
+
+logo_6 = new Image(147,40);
+
+
+
+logo_6.src = "previous2.gif";
+
+
+
+
+
+
+
+
+
+
+
+function pop_menu(imgDocID,imgObjName) 
+
+
+
+{
+
+
+
+  document.images[imgDocID].src = eval(imgObjName + ".src");
+
+
+
+}
+
+
+
+// -->
+
+
+
+</script>
+
+
+
+
+
+
+
+
+
+
+
+<head>
+
+
+
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+
+
+
+<meta name="keywords" content="分子生物學, 演算法, 生物資訊學, string matching, alignment">
+<meta name="description" content="跨領域課程，結合生物與資訊領域的教授一起教學，主要內容概分為(1)分子生物學的基本概念；(2)利用電腦解決生物問題的演算法；(3)基因體學與生物資訊學概論。">
+
+
+
+<meta name="GENERATOR" content="Microsoft FrontPage 6.0">
+
+
+
+<title>生物資訊 Bioinfomatics 中山大學</title>
+
+
+
+</head>
+
+
+
+
+
+
+
+<body>
+
+
+
+<p align="center"><span style="background-color: #FFFF00"><font size="6" color="#000080" face="標楷體">生物資訊&nbsp;&nbsp;&nbsp;</font><font size="6" color="#000080" face="Times New Roman"> 
+Bioinformatics</font></span></p>                                               
+
+
+
+<p align="center">　</p>
+
+
+
+<div align="center">
+
+  <center>
+
+  <table border="1" cellspacing="0" cellpadding="0" style="border-collapse:collapse;
+
+ mso-table-layout-alt:fixed;border:none;mso-border-alt:solid windowtext .5pt;
+
+ mso-padding-alt:0cm 1.4pt 0cm 1.4pt">
+
+    <tr>
+
+      <td width="77" valign="top" style="width:46.4pt;border:solid windowtext .5pt;
+
+  padding:0cm 1.4pt 0cm 1.4pt">
+
+        <p class="MsoNormal" style="text-align:justify;text-justify:inter-ideograph"><span style="font-family:標楷體;mso-ascii-font-family:&quot;Times New Roman&quot;;mso-hansi-font-family:
+
+  &quot;Times New Roman&quot;">教師</span></p>
+
+      </td>
+
+      <td width="225" valign="top" style="width:135.0pt;border:solid windowtext .5pt;
+
+  border-left:none;mso-border-left-alt:solid windowtext .5pt;padding:0cm 1.4pt 0cm 1.4pt">
+
+        <p class="MsoNormal" style="text-align:justify;text-justify:inter-ideograph"><span style="font-family:標楷體;mso-ascii-font-family:&quot;Times New Roman&quot;;mso-hansi-font-family:
+
+  &quot;Times New Roman&quot;">研究室</span></p>
+
+      </td>
+
+      <td width="240" valign="top" style="width:144.0pt;border:solid windowtext .5pt;
+
+  border-left:none;mso-border-left-alt:solid windowtext .5pt;padding:0cm 1.4pt 0cm 1.4pt">
+
+        <p class="MsoNormal" style="text-align:justify;text-justify:inter-ideograph"><span lang="EN-US" style="mso-fareast-font-family:標楷體">E-mail</span></p>
+
+      </td>
+
+      <td width="45" valign="top" style="width:27.0pt;border:solid windowtext .5pt;
+
+  border-left:none;mso-border-left-alt:solid windowtext .5pt;padding:0cm 1.4pt 0cm 1.4pt">
+
+        <p class="MsoNormal" style="text-align:justify;text-justify:inter-ideograph"><span style="font-family:標楷體;mso-ascii-font-family:&quot;Times New Roman&quot;;mso-hansi-font-family:
+
+  &quot;Times New Roman&quot;">電話</span></p>
+
+      </td>
+
+    </tr>
+
+    <tr>
+
+      <td width="77" valign="top" style="width:46.4pt;border:solid windowtext .5pt;
+
+  border-top:none;mso-border-top-alt:solid windowtext .5pt;padding:0cm 1.4pt 0cm 1.4pt">
+
+        <p class="MsoNormal" style="text-align:justify;text-justify:inter-ideograph"><span style="font-size:12.0pt;mso-bidi-font-size:10.0pt;
+font-family:標楷體;mso-ascii-font-family:&quot;Times New Roman&quot;;mso-hansi-font-family:
+&quot;Times New Roman&quot;;mso-bidi-font-family:&quot;Times New Roman&quot;;mso-ansi-language:
+EN-US;mso-fareast-language:ZH-TW;mso-bidi-language:AR-SA"><a href="http://www2.nsysu.edu.tw/biology/clcho.htm">卓忠隆</a></span></p>
+
+      </td>
+
+      <td width="225" valign="top" style="width:135.0pt;border-top:none;border-left:
+
+  none;border-bottom:solid windowtext .5pt;border-right:solid windowtext .5pt;
+
+  mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
+
+  padding:0cm 1.4pt 0cm 1.4pt">
+
+        <p class="MsoNormal" style="text-align:justify;text-justify:inter-ideograph"><span style="font-family:標楷體;mso-ascii-font-family:&quot;Times New Roman&quot;;mso-hansi-font-family:
+
+  &quot;Times New Roman&quot;">生物科學系</span></p>
+
+      </td>
+
+      <td width="240" valign="top" style="width:144.0pt;border-top:none;border-left:
+
+  none;border-bottom:solid windowtext .5pt;border-right:solid windowtext .5pt;
+
+  mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
+
+  padding:0cm 1.4pt 0cm 1.4pt">
+
+        <p class="MsoNormal" style="text-align:justify;text-justify:inter-ideograph"><span lang="EN-US" style="font-size:12.0pt;mso-bidi-font-size:
+10.0pt;font-family:&quot;Times New Roman&quot;;mso-fareast-font-family:標楷體;mso-ansi-language:
+EN-US;mso-fareast-language:ZH-TW;mso-bidi-language:AR-SA"><a href="mailto:clcho@mail.nsysu.edu.tw">clcho@mail.nsysu.edu.tw</a></span></p>
+
+      </td>
+
+      <td width="45" valign="top" style="width:27.0pt;border-top:none;border-left:none;
+
+  border-bottom:solid windowtext .5pt;border-right:solid windowtext .5pt;
+
+  mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
+
+  padding:0cm 1.4pt 0cm 1.4pt">
+
+        <p class="MsoNormal" style="text-align:justify;text-justify:inter-ideograph"><span lang="EN-US" style="mso-fareast-font-family:標楷體">361</span><span style="mso-fareast-font-family: 標楷體" lang="EN-US">0</span></p>
+
+      </td>
+
+    </tr>
+
+    <tr>
+
+      <td width="77" valign="top" style="width:46.4pt;border:solid windowtext .5pt;
+
+  border-top:none;mso-border-top-alt:solid windowtext .5pt;padding:0cm 1.4pt 0cm 1.4pt">
+
+        <p class="MsoNormal" style="text-align:justify;text-justify:inter-ideograph"><span style="font-family:標楷體;mso-ascii-font-family:&quot;Times New Roman&quot;;mso-hansi-font-family:
+
+  &quot;Times New Roman&quot;"><a href="http://par.cse.nsysu.edu.tw/~cbyang/">楊昌彪</a></span><span lang="EN-US" style="mso-fareast-font-family:
+
+  標楷體">&nbsp;
+
+        </span></p>
+
+      </td>
+
+      <td width="225" valign="top" style="width:135.0pt;border-top:none;border-left:
+
+  none;border-bottom:solid windowtext .5pt;border-right:solid windowtext .5pt;
+
+  mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
+
+  padding:0cm 1.4pt 0cm 1.4pt">
+
+        <p class="MsoNormal" style="text-align:justify;text-justify:inter-ideograph"><span style="font-family:標楷體;mso-ascii-font-family:&quot;Times New Roman&quot;;mso-hansi-font-family:
+
+  &quot;Times New Roman&quot;">資訊工程學系</span><span lang="EN-US" style="mso-fareast-font-family:
+
+  標楷體">F5020</span><span style="font-family:標楷體;mso-ascii-font-family:&quot;Times New Roman&quot;;
+
+  mso-hansi-font-family:&quot;Times New Roman&quot;">室</span><span lang="EN-US" style="mso-fareast-font-family:標楷體">&nbsp;
+
+        </span></p>
+
+      </td>
+
+      <td width="240" valign="top" style="width:144.0pt;border-top:none;border-left:
+
+  none;border-bottom:solid windowtext .5pt;border-right:solid windowtext .5pt;
+
+  mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
+
+  padding:0cm 1.4pt 0cm 1.4pt">
+
+        <p class="MsoNormal" style="text-align:justify;text-justify:inter-ideograph"><span style="color: black; text-decoration: none; text-underline: none; mso-fareast-font-family: 標楷體" lang="EN-US"><a href="mailto:cbyang@cse.nsysu.edu.tw">cbyang@cse.nsysu.edu.tw</a></span></p>
+
+      </td>
+
+      <td width="45" valign="top" style="width:27.0pt;border-top:none;border-left:none;
+
+  border-bottom:solid windowtext .5pt;border-right:solid windowtext .5pt;
+
+  mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
+
+  padding:0cm 1.4pt 0cm 1.4pt">
+
+        <p class="MsoNormal" style="text-align:justify;text-justify:inter-ideograph"><span lang="EN-US" style="mso-fareast-font-family:標楷體">4333</span></p>
+
+      </td>
+
+    </tr>
+
+    <tr>
+
+      <td width="77" valign="top" style="width:46.4pt;border:solid windowtext .5pt;
+
+  border-top:none;mso-border-top-alt:solid windowtext .5pt;padding:0cm 1.4pt 0cm 1.4pt">
+
+        <p class="MsoNormal" style="text-align:justify;text-justify:inter-ideograph"><span style="font-family:標楷體;mso-ascii-font-family:&quot;Times New Roman&quot;;mso-hansi-font-family:
+
+  &quot;Times New Roman&quot;"><a href="http://www2.nsysu.edu.tw/ibms/c/teacher/syl-1.htm">薛佑玲</a></span><a href="http://www2.nsysu.edu.tw/ibms/no1/teacherdata/syl-1.htm"><span lang="EN-US" style="mso-fareast-font-family:
+
+  標楷體">&nbsp;
+
+        </span></a></p>
+
+      </td>
+
+      <td width="225" valign="top" style="width:135.0pt;border-top:none;border-left:
+
+  none;border-bottom:solid windowtext .5pt;border-right:solid windowtext .5pt;
+
+  mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
+
+  padding:0cm 1.4pt 0cm 1.4pt">
+
+        <p class="MsoNormal" style="text-align:justify;text-justify:inter-ideograph"><span lang="EN-US" style="mso-fareast-font-family:標楷體">(</span><span style="font-family:標楷體;mso-ascii-font-family:&quot;Times New Roman&quot;;mso-hansi-font-family:
+
+  &quot;Times New Roman&quot;">藝術大樓</span><span lang="EN-US" style="mso-fareast-font-family:
+
+  標楷體">)</span><span style="font-family:標楷體;mso-ascii-font-family:&quot;Times New Roman&quot;;
+
+  mso-hansi-font-family:&quot;Times New Roman&quot;">生醫所</span><span lang="EN-US" style="mso-fareast-font-family:標楷體">111</span><span style="font-family:標楷體;
+
+  mso-ascii-font-family:&quot;Times New Roman&quot;;mso-hansi-font-family:&quot;Times New Roman&quot;">室</span></p>
+
+      </td>
+
+      <td width="240" valign="top" style="width:144.0pt;border-top:none;border-left:
+
+  none;border-bottom:solid windowtext .5pt;border-right:solid windowtext .5pt;
+
+  mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
+
+  padding:0cm 1.4pt 0cm 1.4pt">
+
+        <p class="MsoNormal" style="text-align:justify;text-justify:inter-ideograph"><span lang="EN-US" style="mso-fareast-font-family:標楷體"><a href="mailto:ylshiue@mail.nsysu.edu.tw">ylshiue@mail.nsysu.edu.tw</a></span></p>
+
+      </td>
+
+      <td width="45" valign="top" style="width:27.0pt;border-top:none;border-left:none;
+
+  border-bottom:solid windowtext .5pt;border-right:solid windowtext .5pt;
+
+  mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
+
+  padding:0cm 1.4pt 0cm 1.4pt">
+
+        <p class="MsoNormal" style="text-align:justify;text-justify:inter-ideograph"><span lang="EN-US" style="mso-fareast-font-family:標楷體">5818</span></p>
+
+      </td>
+
+    </tr>
+
+  </table>
+
+  </center>
+
+</div>
+
+                      
+
+                      
+
+        
+
+<blockquote>                      
+
+        
+
+  <blockquote>                      
+
+        
+
+<p align="center">　</p>
+
+
+
+<blockquote>
+  <blockquote>
+    <blockquote>
+
+
+
+<table border="0" cellpadding="12" cellspacing="4" bgcolor="#FFFFFF" width="556" height="89">
+  <tr>                       
+    <td width="540" bgcolor="#BFDFFF" height="1">                 
+      <blockquote>                 
+        <font size="3">助教:<font LANG="ZH-TW">：彭永興<br>               
+        研究室： </font>資訊工程學系 F5013室<font LANG="ZH-TW"><br>                                                           
+        電話(公)：07-525-2000 轉 4345<br>                                                             
+        E-mail:&nbsp; <a href="mailto:pengyh@par.cse.nsysu.edu.tw">pengyh@par.cse.nsysu.edu.tw</a>&nbsp;</font></font>                                               
+      </blockquote>               
+    </td>                      
+  </tr>                      
+</table>                      
+    </blockquote>
+  </blockquote>
+</blockquote>
+    <hr>
+
+        
+
+  </blockquote>                      
+
+        
+
+</blockquote>                      
+
+        
+
+                      
+
+        
+
+<div align="left">
+  <blockquote>
+    <blockquote>
+      <blockquote>
+        <blockquote>
+
+        
+
+           
+
+           
+
+<table border="0" cellpadding="3" cellspacing="0" height="129" width="585">           
+
+           
+
+  <tr>
+
+           
+
+    <td height="1" width="16"><img src="dot4.gif" width="14" height="15"></td>           
+
+           
+
+    <td height="1" width="545" align="left"><p style="margin-top: 5"><a HREF="homework.htm"><font face="Times New Roman"><font lang="ZH-TW">Term        
+      Project </font></font><font lang="ZH-TW">實施要點 </font></a></td>                 
+
+          
+
+  </tr>
+
+           
+
+  <tr>
+
+           
+
+    <td height="1" width="16"><img src="dot4.gif" width="14" height="15"></td>           
+
+           
+
+    <td height="1" width="545" align="left"><p style="margin-top: 5"><a HREF="bioinf.doc"><font LANG="ZH-TW">課程綱要</font></a></td>          
+
+          
+
+  </tr>
+
+  <tr>
+
+           
+
+    <td height="1" width="16"><img src="dot4.gif" width="14" height="15"></td>           
+
+           
+
+    <td height="1" width="545" align="left">
+      <p class="MsoNormal" style="text-justify: inter-ideograph; text-indent: -17.85pt; line-height: 12.0pt; mso-line-height-rule: exactly; mso-pagination: widow-orphan; mso-list: l2 level1 lfo2; tab-stops: list 18.0pt; text-autospace: none; vertical-align: bottom; margin-left: 17.85pt"><span lang="EN-US"><a href="http://www.ncbi.nlm.nih.gov/books/bv.fcgi?call=bv.View..ShowTOC&amp;rid=cooper.TOC&amp;depth=2"><font face="Times New Roman">Part 
+      1 </font>教材<font face="Times New Roman">&nbsp;&nbsp;&nbsp; Geoffrey M. Cooper, 2000,    
+      The Cell - A Molecular Approach, 2nd ed.,                          
+      Sunderland (MA): Sinauer Associates, Inc.</font></a></span></td>                                   
+
+          
+
+</tr>
+
+      <center>                      
+
+        
+
+           
+
+           
+
+  <tr>
+
+           
+
+    <td height="1" width="16"><img src="dot4.gif" width="14" height="15"></td>           
+
+           
+
+    <td height="1" width="545" align="left"><a HREF="http://www.csie.ncnu.edu.tw/~rctlee/biology.html"><font LANG="ZH-TW"><font face="Times New Roman">Part  
+      2 </font></font><font LANG="ZH-TW">教材</font><font face="Times New Roman"><font LANG="ZH-TW">&nbsp;                    
+      &nbsp;&nbsp;&nbsp;&nbsp; </font><span style="mso-bidi-font-size: 10.0pt; mso-ascii-font-family: Times New Roman; mso-hansi-font-family: Times New Roman; mso-bidi-font-family: Times New Roman; mso-ansi-language: EN-US; mso-fareast-language: ZH-TW; mso-bidi-language: AR-SA"></span></font><span style="mso-bidi-font-size: 10.0pt; mso-ascii-font-family: Times New Roman; mso-hansi-font-family: Times New Roman; mso-bidi-font-family: Times New Roman; mso-ansi-language: EN-US; mso-fareast-language: ZH-TW; mso-bidi-language: AR-SA"><font LANG="ZH-TW">李家同教授，計算生物學講義</font></span></a></td>                           
+
+          
+
+  </tr>
+
+        
+
+           
+
+           
+
+  <tr>
+
+           
+
+    <td height="1" width="16"><img src="dot4.gif" width="14" height="15"></td>           
+
+           
+
+    <td height="1" width="545" align="left"><a href="http://www.yihsient.com.tw/_borders/showbook.asp?lang=english&amp;categ=06&amp;bookno=269"><font face="Times New Roman">Part  
+      3 </font> 教材<font face="Times New Roman">&nbsp;&nbsp;&nbsp;&nbsp; <span lang="EN-US" style="mso-fareast-font-family: 細明體; mso-ansi-language: EN-US; mso-fareast-language: ZH-TW; mso-bidi-language: AR-SA">Baxevanis   
+      AD and Ouellette BFF, 2005, <u>Bioinformatics - a Practical Guide to the   
+      Analysis of Genes and Proteins</u>, 3rd ed., John Wiley &amp; SOnx, Inc.   
+      Hoboken, New Jersey, USA.</span></font></a></td>                           
+
+          
+
+  </tr>
+
+  <tr>
+
+           
+
+    <td height="1" width="16"><img src="dot4.gif" width="14" height="15"></td>           
+
+           
+
+    <td height="1" width="545" align="left"><a HREF="database_list03.pdf"><font FACE="細明體" LANG="ZH-TW">分子生物資料庫網址列表</font></a></td>          
+
+          
+
+  </tr>
+
+  <tr>
+
+           
+
+    <td height="1" width="16"><img src="dot4.gif" width="14" height="15"></td>           
+
+           
+
+    <td height="1" width="545" align="left"><a HREF="http://par.cse.nsysu.edu.tw/link/bio_link.htm"><font FACE="細明體" LANG="ZH-TW">生物資訊相關連結</font></a></td>          
+
+          
+
+  </tr>
+
+           
+
+  <tr>
+
+           
+
+    <td height="1" width="16"><img src="dot4.gif" width="14" height="15"></td>           
+
+           
+
+    <td height="1" width="545" align="left"><a HREF="http://elearning.bioinfo.ntu.edu.tw/"><font FACE="細明體" LANG="ZH-TW">生物資訊群體學習網站</font></a></td>          
+
+          
+
+  </tr>
+
+           
+
+  <tr>
+
+           
+
+    <td height="1" width="16"><img src="dot4.gif" width="14" height="15"></td>           
+
+           
+
+    <td height="1" width="545" align="left"><a href="http://www-igm.univ-mlv.fr/~lecroq/string/">Exact                             
+      String Matching Algorithms (收集數十種字串比對方法，有完整的program                             
+      code，以及細部執行的情形)</a></td>          
+
+          
+
+  </tr>
+  <tr>
+
+    <td height="1" width="16"><img src="dot4.gif" width="14" height="15"></td>
+
+    <td height="1" width="516"><a href="http://www.cppreference.com/">C/C++&nbsp;      
+      on line help (可以查詢語法、library等）</a></td>     
+
+  </tr>
+  <tr>
+
+    <td height="1" width="16"><img border="0" src="../advprog/dot4.gif" width="14" height="15"></td>
+
+    <td height="1" width="516"><a href="http://par.cse.nsysu.edu.tw/~cbyang/course/course_index.htm">考試考古題</a></td>
+
+  </tr>
+
+          
+
+</table>          
+
+          
+
+          </blockquote>
+        </blockquote>
+      </blockquote>
+    </blockquote>
+  </div>
+
+          
+
+      </center>
+
+        
+
+                      
+
+        
+
+<blockquote>                      
+
+        
+
+  <blockquote>                      
+
+        
+
+    <blockquote>                      
+
+        
+
+      <ul msimagelist>
+
+      </ul>
+
+                           
+
+<hr>                         
+
+
+
+    </blockquote>
+
+
+
+  </blockquote>
+
+
+
+<div align="center"><center>                             
+
+                             
+
+<table border="0" cellpadding="12" cellspacing="0" width="652">                             
+
+  <tr>                             
+
+    <td bgcolor="#E8E8E8" width="634">      
+
+      <p align="justify"><font size="3"><font color="#800000">課程講義</font>（以下講義為Powerpoint檔案，<font color="#FF0000">若需印出時，最好利用印表機（或fine         
+
+      printer軟體）將二頁（或四頁）合併一頁列印</font>。請不要使用Powerpoint所提供的二頁（或四頁），因為效果不好）：</font></p>     
+
+      <p>註1：此檔案為<font color="#FF0000">Powerpoint 2000</font>所製作，若用其他版本的Powerpoint打開，有些特殊符號可能變形。</p>               
+
+      <p><font size="3" color="#FF0000">註2：修本課程同學，請於上課前，自行印出講義</font></p>              
+
+    </td>                         
+
+  </tr>                         
+
+</table>                        
+
+  </center></div>                        
+
+                        
+
+  <blockquote>                      
+
+        
+
+           
+
+           
+
+    <div align="left">
+
+        
+
+           
+
+           
+
+<blockquote>
+  <blockquote>
+
+        
+
+           
+
+           
+
+<table border="0" cellpadding="3" cellspacing="0" height="129" width="580">           
+
+           
+
+  <tr>
+
+           
+
+    <td height="1" width="21"><img src="dot3.gif" width="20" height="20"></td>           
+
+           
+
+    <td height="1" width="535" align="left">
+	<a href="http://bio.cse.nsysu.edu.tw/bioinfo/bio_video.php"><span lang="EN-US" style="mso-bidi-font-size: 10.0pt; font-family: Times New Roman; mso-fareast-font-family: 標楷體; mso-ansi-language: EN-US; mso-fareast-language: ZH-TW; mso-bidi-language: AR-SA">
+	上課錄影&nbsp; (</span><span style="mso-bidi-font-size: 10.0pt; font-family: Times New Roman; mso-fareast-font-family: 標楷體; mso-ansi-language: EN-US; mso-fareast-language: ZH-TW; mso-bidi-language: AR-SA">需要密碼)</span></a></td>                    
+
+          
+
+  </tr>
+  <tr>
+
+           
+
+    <td height="1" width="21"><img src="dot3.gif" width="20" height="20"></td>           
+
+           
+
+    <td height="1" width="535" align="left"></td>          
+
+          
+
+  </tr>
+
+           
+
+  <tr>
+
+           
+
+    <td height="1" width="21"><img src="dot3.gif" width="20" height="20"></td>           
+
+           
+
+    <td height="1" width="535" align="left"><span style="font-size: 12.0pt; mso-bidi-font-size: 10.0pt; font-family: Times New Roman; mso-fareast-font-family: 新細明體; mso-ansi-language: EN-US; mso-fareast-language: ZH-TW; mso-bidi-language: AR-SA" lang="EN-US"><a href="bio1.ppt">Introduction</a></span></td>          
+
+          
+
+  </tr>
+
+           
+
+  <tr>
+
+           
+
+    <td height="1" width="21"></td>           
+
+           
+
+    <td height="1" width="535" align="left"><span style="mso-bidi-font-size: 10.0pt; font-family: Times New Roman; mso-fareast-font-family: 新細明體; mso-ansi-language: EN-US; mso-fareast-language: ZH-TW; mso-bidi-language: AR-SA" lang="EN-US"><font size="5">Part 
+      1</font></span></td>           
+
+          
+
+  </tr>
+
+           
+
+  <tr>
+
+           
+
+    <td height="1" width="21"><img src="dot3.gif" width="20" height="20"></td>           
+
+           
+
+    <td height="1" width="535" align="left"><span lang="EN-US" style="font-size:12.0pt;mso-bidi-font-size:
+10.0pt;font-family:&quot;Times New Roman&quot;;mso-fareast-font-family:新細明體;mso-ansi-language:
+EN-US;mso-fareast-language:ZH-TW;mso-bidi-language:AR-SA"><a href="cho1.ppt">Exploring 
+      Life &amp; A Tour of the Cell</a></span></td>            
+
+          
+
+  </tr>
+  <tr>
+
+           
+
+    <td height="1" width="21"><img src="dot3.gif" width="20" height="20"></td>           
+
+           
+
+    <td height="1" width="535" align="left"><span lang="EN-US" style="font-size:12.0pt;mso-bidi-font-size:
+10.0pt;font-family:&quot;Times New Roman&quot;;mso-fareast-font-family:新細明體;mso-ansi-language:
+EN-US;mso-fareast-language:ZH-TW;mso-bidi-language:AR-SA"><a href="cho2.ppt">The Structure and    
+      Function of Nucleic Acids and Proteins Macormolecules</a></span></td>            
+
+          
+
+  </tr>
+  <tr>
+
+           
+
+    <td height="1" width="21"><img src="dot3.gif" width="20" height="20"></td>           
+
+           
+
+    <td height="1" width="535" align="left"><span lang="EN-US" style="font-size: 12.0pt; mso-bidi-font-size: 10.0pt; mso-fareast-font-family: 新細明體; mso-ansi-language: EN-US; mso-fareast-language: ZH-TW; mso-bidi-language: AR-SA"><font face="Times New Roman"><a href="cho3.ppt">How Are Genes     
+      Expressed? From Gene to Protein</a></font></span></td>             
+
+          
+
+  </tr>
+  <tr>
+
+           
+
+    <td height="1" width="21"><font size="3" face="Times New Roman"><img src="dot3.gif" width="20" height="20"></font></td>           
+
+           
+
+    <td height="1" width="535" align="left"><font size="3" face="Times New Roman"><a href="cho4.ppt">Organization 
+      of Chromosome and Genome</a></font></td>            
+
+          
+
+  </tr>
+  <tr>
+
+           
+
+    <td height="1" width="21"><img src="dot3.gif" width="20" height="20"></td>           
+
+           
+
+    <td height="1" width="535" align="left"><font face="Times New Roman"><font size="3"><span style="mso-fareast-font-family: 新細明體; mso-fareast-language: ZH-TW" lang="EN-US"><a href="cho5.ppt">Basic          
+      Principles and Components of PCR (<span style="mso-bidi-font-size: 10.0pt; font-family: Times New Roman; mso-fareast-font-family: 新細明體; mso-ansi-language: EN-US; mso-fareast-language: ZH-TW; mso-bidi-language: AR-SA">P</span></a></span></font><a href="cho5.ppt"><span lang="EN-US" style="font-size:12.0pt;mso-bidi-font-size:        
+10.0pt;font-family:&quot;Times New Roman&quot;;mso-fareast-font-family:新細明體;mso-ansi-language:
+EN-US;mso-fareast-language:ZH-TW;mso-bidi-language:AR-SA">olymerase Chain   
+      Reaction)</span><span style="font-size: 12.0pt; mso-bidi-font-size: 10.0pt; mso-fareast-font-family: 新細明體; mso-ansi-language: EN-US; mso-fareast-language: ZH-TW; mso-bidi-language: AR-SA" lang="EN-US">&nbsp;</span></a><span style="font-size: 12.0pt; mso-bidi-font-size: 10.0pt; mso-fareast-font-family: 新細明體; mso-ansi-language: EN-US; mso-fareast-language: ZH-TW; mso-bidi-language: AR-SA" lang="EN-US">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;         
+      </font><a href="大腸桿菌核酸粗萃取.doc">大腸桿菌核酸粗萃取</a><font face="Times New Roman">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;         
+      <a href="PCR實驗步驟0604.doc">PCR</a></font></span><span style="font-size: 12.0pt; mso-bidi-font-size: 10.0pt; mso-fareast-font-family: 新細明體; mso-ansi-language: EN-US; mso-fareast-language: ZH-TW; mso-bidi-language: AR-SA" lang="EN-US"><a href="PCR實驗步驟0604.doc">實驗步驟</a></span></td>          
+
+          
+
+  </tr>
+
+           
+
+  <tr>
+
+           
+
+    <td height="1" width="21"></td>           
+
+           
+
+    <td height="1" width="535" align="left"><span style="mso-bidi-font-size: 10.0pt; font-family: Times New Roman; mso-fareast-font-family: 新細明體; mso-ansi-language: EN-US; mso-fareast-language: ZH-TW; mso-bidi-language: AR-SA" lang="EN-US"><font size="5">Part            
+      2</font></span></td>          
+
+          
+
+  </tr>
+
+           
+
+  <tr>   
+
+           
+
+    <td height="1" width="21"><img src="dot3.gif" width="20" height="20"></td>           
+
+           
+
+    <td height="1" width="535" align="left"><span lang="EN-US" style="font-size:12.0pt;mso-bidi-font-size:
+
+10.0pt;font-family:&quot;Times New Roman&quot;;mso-fareast-font-family:標楷體;mso-ansi-language:
+
+EN-US;mso-fareast-language:ZH-TW;mso-bidi-language:AR-SA"><a href="bio2.ppt">Introduction to                        
+
+      Algorithms</a></span></td>          
+
+          
+
+  </tr>   
+
+  <tr>   
+
+           
+
+    <td height="1" width="21"><img src="dot3.gif" width="20" height="20"></td>           
+
+           
+
+    <td height="1" width="535" align="left"><span lang="EN-US" style="font-size:12.0pt;mso-bidi-font-size:
+
+10.0pt;font-family:&quot;Times New Roman&quot;;mso-fareast-font-family:標楷體;mso-ansi-language:
+
+EN-US;mso-fareast-language:ZH-TW;mso-bidi-language:AR-SA"><a href="bio3.ppt">String Matching</a></span></td>              
+
+          
+
+  </tr>   
+
+  <tr>   
+
+           
+
+    <td height="1" width="21"><img src="dot3.gif" width="20" height="20"></td>           
+
+           
+
+    <td height="1" width="535" align="left"><span lang="EN-US" style="font-size:12.0pt;mso-bidi-font-size:
+
+10.0pt;font-family:&quot;Times New Roman&quot;;mso-fareast-font-family:標楷體;mso-ansi-language:
+
+EN-US;mso-fareast-language:ZH-TW;mso-bidi-language:AR-SA"><a href="bio4.ppt">Sequence Alignment</a></span></td>           
+
+          
+
+  </tr>   
+
+  <tr>   
+
+           
+
+    <td height="1" width="21"><img src="dot3.gif" width="20" height="20"></td>           
+
+           
+
+    <td height="1" width="535" align="left"><span lang="EN-US" style="font-size:12.0pt;mso-bidi-font-size:
+
+10.0pt;font-family:&quot;Times New Roman&quot;;mso-fareast-font-family:標楷體;mso-ansi-language:
+
+EN-US;mso-fareast-language:ZH-TW;mso-bidi-language:AR-SA"><a href="bio5.ppt">Evolution Trees</a></span></td>              
+
+          
+
+  </tr>   
+
+  <tr>
+
+           
+
+    <td height="1" width="21"><img src="dot3.gif" width="20" height="20"></td>           
+
+           
+
+    <td height="1" width="535" align="left"><span lang="EN-US" style="font-size:12.0pt;mso-bidi-font-size:
+
+10.0pt;font-family:&quot;Times New Roman&quot;;mso-fareast-font-family:標楷體;mso-ansi-language:
+
+EN-US;mso-fareast-language:ZH-TW;mso-bidi-language:AR-SA"><a href="bio6.ppt">Secondary Structure of                  
+
+      RNA</a></span></td>           
+
+          
+
+  </tr>
+
+  <tr>
+
+           
+
+    <td height="1" width="21"><img src="dot3.gif" width="20" height="20"></td>           
+
+           
+
+    <td height="1" width="535" align="left"><span lang="EN-US" style="font-size:12.0pt;mso-bidi-font-size:
+
+10.0pt;font-family:&quot;Times New Roman&quot;;mso-fareast-font-family:標楷體;mso-ansi-language:
+
+EN-US;mso-fareast-language:ZH-TW;mso-bidi-language:AR-SA"><a href="bio6b.ppt">Prediction        
+      of Protein Structures</a></span></td>                          
+
+          
+
+  </tr>
+
+  <tr>
+
+           
+
+    <td height="1" width="21"><img src="dot3.gif" width="20" height="20"></td>           
+
+           
+
+    <td height="1" width="535" align="left"><span lang="EN-US" style="font-size:12.0pt;mso-bidi-font-size:
+
+10.0pt;font-family:&quot;Times New Roman&quot;;mso-fareast-font-family:標楷體;mso-ansi-language:
+
+EN-US;mso-fareast-language:ZH-TW;mso-bidi-language:AR-SA"><a href="bio7.ppt"><span style="font-size: 12.0pt; mso-bidi-font-size: 10.0pt; font-family: Times New Roman; mso-fareast-font-family: 標楷體; mso-ansi-language: EN-US; mso-fareast-language: ZH-TW; mso-bidi-language: AR-SA">Genome 
+      Rearrangement</span></a><span style="font-size: 12.0pt; mso-bidi-font-size: 10.0pt; font-family: Times New Roman; mso-fareast-font-family: 標楷體; mso-ansi-language: EN-US; mso-fareast-language: ZH-TW; mso-bidi-language: AR-SA">&nbsp;&nbsp;<br>
+      </span></span><span style="font-size: 12.0pt; mso-bidi-font-size: 10.0pt; font-family: Times New Roman; mso-fareast-font-family: 標楷體; mso-ansi-language: EN-US; mso-fareast-language: ZH-TW; mso-bidi-language: AR-SA" lang="EN-US">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;              
+      <a href="Chapter_7_GenomeModifiedCBY.doc">講義(Word)，從李家同教授講義修正而得</a></span></td>                       
+
+          
+
+  </tr>
+  <tr>
+
+           
+
+    <td height="1" width="21"></td>           
+
+           
+
+    <td height="1" width="535" align="left"><span style="mso-bidi-font-size: 10.0pt; font-family: Times New Roman; mso-fareast-font-family: 新細明體; mso-ansi-language: EN-US; mso-fareast-language: ZH-TW; mso-bidi-language: AR-SA" lang="EN-US"><font size="5">Part         
+      3</font></span></td>                     
+
+          
+
+  </tr>
+  <tr>
+
+           
+
+    <td height="1" width="21"><img src="dot3.gif" width="20" height="20"></td>           
+
+           
+
+    <td height="1" width="535" align="left"><span lang="EN-US" style="font-size:12.0pt;mso-bidi-font-size:
+10.0pt;font-family:&quot;Times New Roman&quot;;mso-fareast-font-family:標楷體;mso-ansi-language:
+EN-US;mso-fareast-language:ZH-TW;mso-bidi-language:AR-SA"><a href="shiue1.pdf">Introduction 
+      to Genome Projects and Bioinformatics</a></span></td>                         
+
+          
+
+  </tr>
+
+  <tr>
+
+           
+
+    <td height="1" width="21"><img src="dot3.gif" width="20" height="20"></td>           
+
+           
+
+    <td height="1" width="535" align="left"><font face="Times New Roman"><a href="shiue2.pdf">Predictive 
+      Methods Using DNA Sequences (1)</a></font></td>                      
+
+          
+
+  </tr>
+
+  <tr>
+
+           
+
+    <td height="1" width="21"><img src="dot3.gif" width="20" height="20"></td>           
+
+           
+
+    <td height="1" width="535" align="left"><font face="Times New Roman"><a href="shiue3.pdf">Predictive 
+      Methods Using DAN Sequences (2)</a></font></td>                      
+
+          
+
+  </tr>
+  <tr>
+
+           
+
+    <td height="1" width="21"><img src="dot3.gif" width="20" height="20"></td>           
+
+           
+
+    <td height="1" width="535" align="left"><font face="Times New Roman"><a href="shiue4.pdf">Predictive 
+      Methods Using Protein Sequences (1)</a></font></td>                   
+
+          
+
+  </tr>
+
+  <tr>
+
+           
+
+    <td height="1" width="21"><img src="dot3.gif" width="20" height="20"></td>           
+
+           
+
+    <td height="1" width="535" align="left"><font face="Times New Roman"><a href="shiue4_genomics.pdf">Functional 
+      Genomics(1)</a></font></td>                    
+
+          
+
+  </tr>
+
+  <tr>
+
+           
+
+    <td height="1" width="21"><img src="dot3.gif" width="20" height="20"></td>           
+
+           
+
+    <td height="1" width="535" align="left"><font face="Times New Roman"><a href="shiue5.pdf">Predictive  
+      Methods Using Protein Sequences (2)</a></font></td>                     
+
+          
+
+  </tr>
+
+          
+
+</table>          
+
+          
+
+  </blockquote>
+</blockquote>
+
+          
+
+    </div>
+
+          
+
+  </blockquote>
+
+
+
+</blockquote>
+
+
+
+
+
+
+
+<blockquote>
+
+
+
+  <blockquote>
+
+
+
+    <hr>
+
+
+
+<div align="center"><center>           
+
+           
+
+           
+
+           
+
+<table border="0" cellpadding="3" cellspacing="0" height="129" width="528">           
+
+           
+
+  <tr>           
+
+           
+
+    <td height="9" colspan="2" width="516" bgcolor="#C0C0C0"><font face="新細明體" lang="ZH-TW" color="#FFFFFF">其他參考資料或文章<br>   
+
+      （下列文章均為通俗性介紹，適合所有理工背景者閱讀）   
+
+      </font></td>           
+
+           
+
+  </tr>           
+
+           
+
+  <tr>   
+
+           
+
+    <td height="1" width="16"><img src="dot3.gif" width="20" height="20"></td>           
+
+           
+
+    <td height="1" width="488"><a HREF="http://emag.ncnu.edu.tw/show.asp?dataID={B2A49C35-4033-11D4-B180-0050BAE32D5F}"><font LANG="ZH-TW" size="3" color="#0000FF" face="新細明體">DNA像電腦嗎&nbsp;</font><font face="新細明體" color="#cc33cc" size="4" lang="ZH-TW"><b>&nbsp;</b></font><font LANG="ZH-TW" size="3" color="#0000FF">&nbsp;&nbsp;                              
+
+      李家同</font></a></td>          
+
+          
+
+  </tr>   
+
+  <tr>   
+
+           
+
+    <td height="1" width="16"><img src="dot3.gif" width="20" height="20"></td>           
+
+           
+
+    <td height="1" width="488"><a HREF="http://emag.ncnu.edu.tw/show.asp?dataID={88EFD1B7-908A-11D4-B192-0050BAE32D5F}"><font LANG="ZH-TW" size="3" color="#0000FF" face="新細明體">生命之書—人類基因體計劃簡介&nbsp;</font><font face="新細明體" color="#cc33cc" size="4" lang="ZH-TW"><b>&nbsp;</b></font><font LANG="ZH-TW" size="3" color="#0000FF">&nbsp;&nbsp;                              
+
+      呂平江</font></a></td>          
+
+          
+
+  </tr>   
+
+  <tr>   
+
+           
+
+    <td height="1" width="16"><img src="dot3.gif" width="20" height="20"></td>           
+
+           
+
+    <td height="1" width="488"><a HREF="http://emag.ncnu.edu.tw/show.asp?dataID={8FE11BBA-8D51-4A56-AAC6-D29D6B599212}"><font face="新細明體">DNA親子鑑定&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;                              
+
+      李俊億</font></a></td>          
+
+          
+
+  </tr>   
+
+  <tr>   
+
+           
+
+    <td height="1" width="16"><img src="dot3.gif" width="20" height="20"></td>           
+
+           
+
+    <td height="1" width="488"><a HREF="http://emag.ncnu.edu.tw/show.asp?dataID={D3B5F0C5-4087-470F-979F-C736DBE8F91A}"><font LANG="ZH-TW" size="3" color="#0000FF"><font face="新細明體">地球上最早的文字</font>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;               
+      李家同</font></a></td>          
+
+          
+
+  </tr>   
+
+  <tr>
+
+           
+
+    <td height="1" width="16"><img src="dot3.gif" width="20" height="20"></td>           
+
+           
+
+    <td height="1" width="488"><a HREF="http://emag.ncnu.edu.tw/show.asp?dataID={8703589C-348E-46A4-85EC-73C93B70CCE5}"><font lang="ZH-TW" size="3">基因科技對人類的衝擊&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;               
+      張碩修</font></a></td>          
+
+          
+
+  </tr>
+
+  <tr>   
+
+           
+
+    <td height="1" width="16"><img src="dot3.gif" width="20" height="20"></td>           
+
+           
+
+    <td height="1" width="488"><a HREF="http://emag.ncnu.edu.tw/show.asp?dataID={99618B4F-DAC2-467C-81F0-4D9800B093FF}"><font LANG="ZH-TW" size="3">NP-Completeness簡介&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;                            
+
+      林妙聰</font></a></td>          
+
+          
+
+  </tr>   
+
+           
+
+</table>          
+
+          
+
+</center></div>          
+
+          
+
+          
+
+          
+
+  </blockquote>
+
+
+
+</blockquote>
+
+
+
+
+
+
+
+<blockquote>  
+
+
+
+  <hr>  
+
+
+
+</blockquote>  
+
+
+
+<div align="center"><center>  
+
+
+
+  
+
+
+
+<table border="0">  
+
+
+
+  <tr>  
+
+
+
+    <td><a onMouseOver="pop_menu('doc_logo_1','logo_2')" onMouseOut="pop_menu('doc_logo_1','logo_1')" href="../../index.htm"><img src="back1.gif" name="doc_logo_1" border="0" WIDTH="210" HEIGHT="40"></a></td>  
+
+
+
+    <td>&nbsp; </td>  
+
+
+
+    <td></td>  
+
+
+
+    <td><a onMouseOver="pop_menu('doc_logo_3','logo_4')" onMouseOut="pop_menu('doc_logo_3','logo_3')" href="../../main_menu/menu.htm"><img src="backmenu1.gif" name="doc_logo_3" border="0" WIDTH="240" HEIGHT="40"></a></td>  
+
+
+
+  </tr>  
+
+
+
+  <tr>  
+
+
+
+    <td><a href="../../index.htm"><img src="cbyhome.gif" border="0" width="210" height="25"></a></td>  
+
+
+
+    <td></td>  
+
+
+
+    <td></td>  
+
+
+
+    <td><a href="../../main_menu/menu.htm"><img src="cbyindex.gif" border="0" width="240" height="25"></a></td>  
+
+
+
+  </tr>  
+
+
+
+</table>  
+
+
+
+</center></div>  
+
+
+
+</body>  
+
+
+
+</html>  
+
+
+
