@@ -1,0 +1,681 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>高等程式設計課程錄影</title>
+
+  <style>
+    :root{
+      --bg:#2c2c2c;
+      --bg2:#1f1f1f;
+      --grid:#5a5a5a;
+      --title:#ffffff;
+      --note:#e8e8e8;
+      --yellow:#ffeb3b;
+    }
+
+    body{
+      margin:0;
+      background:#111;
+      font-family: "Microsoft JhengHei","Noto Sans TC",Arial,Helvetica,sans-serif;
+      color:#fff;
+    }
+
+    /* page width like screenshot */
+    .wrap{
+      width: 1200px;
+      margin: 0 auto;
+      padding: 0;
+    }
+
+    /* top title */
+    .header{
+      background: var(--bg2);
+      padding: 18px 0 6px;
+      text-align:center;
+      font-weight: 800;
+      font-size: 32px;
+      letter-spacing: 1px;
+      color: var(--title);
+      text-shadow: 0 2px 0 rgba(0,0,0,.6);
+    }
+
+    .note{
+      background: var(--bg2);
+      padding: 6px 0 16px;
+      text-align:center;
+      font-size: 14px;
+      color: var(--note);
+      opacity: .95;
+    }
+
+    /* table region */
+    .table-zone{
+      background: var(--bg);
+      padding: 10px 0 20px;
+    }
+
+    table{
+      border-collapse: separate;
+      border-spacing: 0;
+      width: 820px;           /* keep similar proportion */
+      margin-left: 30px;      /* left offset like screenshot */
+      color:#fff;
+      font-size: 16px;
+    }
+
+    thead th{
+      background: #3b3b3b;
+      border: 1px solid var(--grid);
+      border-bottom: none;
+      padding: 8px 10px;
+      font-weight: 700;
+    }
+
+    tbody td{
+      background: #4a4a4a;
+      border-left: 1px solid var(--grid);
+      border-right: 1px solid var(--grid);
+      border-bottom: 1px solid var(--grid);
+      padding: 8px 10px;
+      line-height: 1.2;
+      vertical-align: middle;
+    }
+
+    tbody tr:first-child td{
+      border-top: 1px solid var(--grid);
+    }
+
+    /* column widths similar to screenshot */
+    .col-sec{ width: 120px; text-align:left; }
+    .col-chap{ width: 420px; text-align:center; }
+    .col-file{ width: 170px; text-align:center; }
+    .col-size{ width: 110px; text-align:center; }
+
+    /* highlight file links yellow */
+    a.file{
+      color: var(--yellow);
+      text-decoration: none;
+      font-weight: 800;
+    }
+    a.file:hover{
+      text-decoration: underline;
+    }
+
+    /* left "第x節" look */
+    .sec{
+      font-weight: 700;
+      color:#eaeaea;
+    }
+
+    /* subtle container background like old campus pages */
+    .bar{
+      height: 10px;
+      background:#2a2a2a;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="wrap">
+    <div class="header">高等程式設計課程錄影</div>
+
+  
+    <div class="table-zone">
+      <table>
+        <thead>
+          <tr>
+            <th class="col-sec">1</th>
+            <th class="col-chap">&nbsp;</th>
+            <th class="col-file">影片連接</th>
+            <th class="col-size">大小</th>
+          </tr>
+        </thead>
+
+        <tbody>
+          <tr>
+            <td class="col-sec"><span class="sec">第 1 節</span></td>
+            <td class="col-chap">Chap. 0</td>
+            <td class="col-file"><a class="file" href="https://youtu.be/OuSjfCQfJUw">1</a></td>
+            <td class="col-size">115MB</td>
+          </tr>
+
+          <tr>
+            <td class="col-sec"><span class="sec">第 2 節</span></td>
+            <td class="col-chap">Chap. 1 - Introduction</td>
+            <td class="col-file"><a class="file" href="https://youtu.be/MKP_Cwm6pQ8">2</a></td>
+            <td class="col-size">119MB</td>
+          </tr>
+
+          <tr>
+            <td class="col-sec"><span class="sec">第 3 節</span></td>
+            <td class="col-chap">Introduction</td>
+            <td class="col-file"><a class="file" href="https://youtu.be/DVLqQesHGUg">3</a></td>
+            <td class="col-size">70MB</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="table-zone">
+      <table>
+        <thead>
+          <tr>
+            <th class="col-sec">2</th>
+            <th class="col-chap">&nbsp;</th>
+            <th class="col-file">影片連接</th>
+            <th class="col-size">大小</th>
+          </tr>
+        </thead>
+
+        <tbody>
+          <tr>
+            <td class="col-sec"><span class="sec">第 1 節</span></td>
+            <td class="col-chap">Chap. 1 - Introduction</td>
+            <td class="col-file"><a class="file" href="https://youtu.be/nEJfTzZqgwU">1</a></td>
+            <td class="col-size">115MB</td>
+          </tr>
+
+          <tr>
+            <td class="col-sec"><span class="sec">第 2 節</span></td>
+            <td class="col-chap">Chap. 2 - Graph Algorithms</td>
+            <td class="col-file"><a class="file" href="https://youtu.be/nc02W4nzYds">2</a></td>
+            <td class="col-size">119MB</td>
+          </tr>
+
+          <tr>
+            <td class="col-sec"><span class="sec">第 3 節</span></td>
+            <td class="col-chap">ACM Problems</td>
+            <td class="col-file"><a class="file" href="https://youtu.be/F2jkmBF-fck">3</a></td>
+            <td class="col-size">70MB</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="table-zone">
+      <table>
+        <thead>
+          <tr>
+            <th class="col-sec">3</th>
+            <th class="col-chap">&nbsp;</th>
+            <th class="col-file">影片連接</th>
+            <th class="col-size">大小</th>
+          </tr>
+        </thead>
+
+        <tbody>
+          <tr>
+            <td class="col-sec"><span class="sec">第 1 節</span></td>
+            <td class="col-chap">Chap. 2 - Graph Algorithms</td>
+            <td class="col-file"><a class="file" href="https://youtu.be/r6jSOmB1oXQ">1</a></td>
+            <td class="col-size">115MB</td>
+          </tr>
+
+          <tr>
+            <td class="col-sec"><span class="sec">第 2 節</span></td>
+            <td class="col-chap">Chap. 2 - Graph Algorithms</td>
+            <td class="col-file"><a class="file" href="https://youtu.be/twX6oEo2HRE">2</a></td>
+            <td class="col-size">119MB</td>
+          </tr>
+
+          <tr>
+            <td class="col-sec"><span class="sec">第 3 節</span></td>
+            <td class="col-chap">ACM Problems</td>
+            <td class="col-file"><a class="file" href="https://youtu.be/VjBhQGy1sFE">3</a></td>
+            <td class="col-size">70MB</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="table-zone">
+      <table>
+        <thead>
+          <tr>
+            <th class="col-sec">4</th>
+            <th class="col-chap">&nbsp;</th>
+            <th class="col-file">影片連接</th>
+            <th class="col-size">大小</th>
+          </tr>
+        </thead>
+
+        <tbody>
+          <tr>
+            <td class="col-sec"><span class="sec">第 1 節</span></td>
+            <td class="col-chap">Chap. 2 - Graph Algorithms</td>
+            <td class="col-file"><a class="file" href="https://youtu.be/Nnm8kslcZNc">1</a></td>
+            <td class="col-size">115MB</td>
+          </tr>
+
+          <tr>
+            <td class="col-sec"><span class="sec">第 2 節</span></td>
+            <td class="col-chap">Chap. 2 - Graph Algorithms</td>
+            <td class="col-file"><a class="file" href="https://youtu.be/wSAWKqoYVgU">2</a></td>
+            <td class="col-size">119MB</td>
+          </tr>
+
+          <tr>
+            <td class="col-sec"><span class="sec">第 3 節</span></td>
+            <td class="col-chap">ACM Problems</td>
+            <td class="col-file"><a class="file" href="https://youtu.be/WVt23uihU_I">3</a></td>
+            <td class="col-size">70MB</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="table-zone">
+      <table>
+        <thead>
+          <tr>
+            <th class="col-sec">5</th>
+            <th class="col-chap">&nbsp;</th>
+            <th class="col-file">影片連接</th>
+            <th class="col-size">大小</th>
+          </tr>
+        </thead>
+
+        <tbody>
+          <tr>
+            <td class="col-sec"><span class="sec">第 1 節</span></td>
+            <td class="col-chap">Chap. 2 - Graph Algorithms</td>
+            <td class="col-file"><a class="file" href="https://youtu.be/r6jSOmB1oXQ">1</a></td>
+            <td class="col-size">115MB</td>
+          </tr>
+
+          <tr>
+            <td class="col-sec"><span class="sec">第 2 節</span></td>
+            <td class="col-chap">Chap. 2 - Graph Algorithms</td>
+            <td class="col-file"><a class="file" href="https://youtu.be/fFlhknAZG8g">2</a></td>
+            <td class="col-size">119MB</td>
+          </tr>
+
+          <tr>
+            <td class="col-sec"><span class="sec">第 3 節</span></td>
+            <td class="col-chap">ACM Problems</td>
+            <td class="col-file"><a class="file" href="https://youtu.be/VjBhQGy1sFE">3</a></td>
+            <td class="col-size">70MB</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+
+  
+
+  <div class="table-zone">
+      <table>
+        <thead>
+          <tr>
+            <th class="col-sec">6</th>
+            <th class="col-chap">&nbsp;</th>
+            <th class="col-file">影片連接</th>
+            <th class="col-size">大小</th>
+          </tr>
+        </thead>
+
+        <tbody>
+          <tr>
+            <td class="col-sec"><span class="sec">第 1 節</span></td>
+            <td class="col-chap">Chap. 3 - Greedy Method</td>
+            <td class="col-file"><a class="file" href="https://youtu.be/YRelvvn8hoU">1</a></td>
+            <td class="col-size">115MB</td>
+          </tr>
+
+          <tr>
+            <td class="col-sec"><span class="sec">第 2 節</span></td>
+            <td class="col-chap">Chap. 3 - Greedy Method</td>
+            <td class="col-file"><a class="file" href="https://youtu.be/nFqV2h5v9CI">2</a></td>
+            <td class="col-size">119MB</td>
+          </tr>
+
+          <tr>
+            <td class="col-sec"><span class="sec">第 3 節</span></td>
+            <td class="col-chap">ACM Problems</td>
+            <td class="col-file"><a class="file" href="https://youtu.be/nFqV2h5v9CI">3</a></td>
+            <td class="col-size">70MB</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+
+  
+
+  <div class="table-zone">
+      <table>
+        <thead>
+          <tr>
+            <th class="col-sec">7</th>
+            <th class="col-chap">&nbsp;</th>
+            <th class="col-file">影片連接</th>
+            <th class="col-size">大小</th>
+          </tr>
+        </thead>
+
+        <tbody>
+          <tr>
+            <td class="col-sec"><span class="sec">第 1 節</span></td>
+            <td class="col-chap">Chap. 3 - Greedy Method</td>
+            <td class="col-file"><a class="file" href="https://youtu.be/PsjjTjSICCI">1</a></td>
+            <td class="col-size">115MB</td>
+          </tr>
+
+          <tr>
+            <td class="col-sec"><span class="sec">第 2 節</span></td>
+            <td class="col-chap">Chap. 4 - Divide & Conquer</td>
+            <td class="col-file"><a class="file" href="https://youtu.be/nXE9b4h-gf0">2</a></td>
+            <td class="col-size">119MB</td>
+          </tr>
+
+          <tr>
+            <td class="col-sec"><span class="sec">第 3 節</span></td>
+            <td class="col-chap">ACM Problems</td>
+            <td class="col-file"><a class="file" href="https://youtu.be/d61RBIZZ5BE">3</a></td>
+            <td class="col-size">70MB</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="table-zone">
+      <table>
+        <thead>
+          <tr>
+            <th class="col-sec">8</th>
+            <th class="col-chap">&nbsp;</th>
+            <th class="col-file">影片連接</th>
+            <th class="col-size">大小</th>
+          </tr>
+        </thead>
+
+        <tbody>
+          <tr>
+            <td class="col-sec"><span class="sec">第 1 節</span></td>
+            <td class="col-chap">Chap. 4 - Divide & Conquer</td>
+            <td class="col-file"><a class="file" href="https://youtu.be/NzQ1A4v5djs">1</a></td>
+            <td class="col-size">115MB</td>
+          </tr>
+
+          <tr>
+            <td class="col-sec"><span class="sec">第 2 節</span></td>
+            <td class="col-chap">Chap. 4 - Divide & Conquer</td>
+            <td class="col-file"><a class="file" href="https://youtu.be/-Js7KwAkjsY">2</a></td>
+            <td class="col-size">119MB</td>
+          </tr>
+
+          <tr>
+            <td class="col-sec"><span class="sec">第 3 節</span></td>
+            <td class="col-chap">ACM Problems</td>
+            <td class="col-file"><a class="file" href="https://youtu.be/X-QbxA_2FW8">3</a></td>
+            <td class="col-size">70MB</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+  
+  <div class="table-zone">
+      <table>
+        <thead>
+          <tr>
+            <th class="col-sec">9</th>
+            <th class="col-chap">&nbsp;</th>
+            <th class="col-file">影片連接</th>
+            <th class="col-size">大小</th>
+          </tr>
+        </thead>
+
+        <tbody>
+          <tr>
+            <td class="col-sec"><span class="sec">第 1 節</span></td>
+            <td class="col-chap">Chap. 4 - Divide & Conquer</td>
+            <td class="col-file"><a class="file" href="https://youtu.be/wCS4QIXnG3Y">1</a></td>
+            <td class="col-size">115MB</td>
+          </tr>
+
+          <tr>
+            <td class="col-sec"><span class="sec">第 2 節</span></td>
+            <td class="col-chap">Chap. 4 - Divide & Conquer</td>
+            <td class="col-file"><a class="file" href="https://youtu.be/ZynPHwKjWXA">2</a></td>
+            <td class="col-size">119MB</td>
+          </tr>
+
+          <tr>
+            <td class="col-sec"><span class="sec">第 3 節</span></td>
+            <td class="col-chap">ACM Problems</td>
+            <td class="col-file"><a class="file" href="https://youtu.be/iiBT8X2da-I">3</a></td>
+            <td class="col-size">70MB</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="table-zone">
+      <table>
+        <thead>
+          <tr>
+            <th class="col-sec">10</th>
+            <th class="col-chap">&nbsp;</th>
+            <th class="col-file">影片連接</th>
+            <th class="col-size">大小</th>
+          </tr>
+        </thead>
+
+        <tbody>
+          <tr>
+            <td class="col-sec"><span class="sec">第 1 節</span></td>
+            <td class="col-chap">Chap. 4 - Divide & Conquer</td>
+            <td class="col-file"><a class="file" href="https://youtu.be/7UAc4xVtcn0">1</a></td>
+            <td class="col-size">115MB</td>
+          </tr>
+
+          <tr>
+            <td class="col-sec"><span class="sec">第 2 節</span></td>
+            <td class="col-chap">Chap. 5 - Tree Searching</td>
+            <td class="col-file"><a class="file" href="https://youtu.be/xrtsQcMBpXg">2</a></td>
+            <td class="col-size">119MB</td>
+          </tr>
+
+          <tr>
+            <td class="col-sec"><span class="sec">第 3 節</span></td>
+            <td class="col-chap">ACM Problems</td>
+            <td class="col-file"><a class="file" href="https://youtu.be/9QzLPVzOItw">3</a></td>
+            <td class="col-size">70MB</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+
+    <div class="table-zone">
+      <table>
+        <thead>
+          <tr>
+            <th class="col-sec">11</th>
+            <th class="col-chap">&nbsp;</th>
+            <th class="col-file">影片連接</th>
+            <th class="col-size">大小</th>
+          </tr>
+        </thead>
+
+        <tbody>
+          <tr>
+            <td class="col-sec"><span class="sec">第 1 節</span></td>
+            <td class="col-chap">Chap. 5 - Tree Searching</td>
+            <td class="col-file"><a class="file" href="https://youtu.be/bdALTYV1jyI">1</a></td>
+            <td class="col-size">115MB</td>
+          </tr>
+
+          <tr>
+            <td class="col-sec"><span class="sec">第 2 節</span></td>
+            <td class="col-chap">ACM Problems</td>
+            <td class="col-file"><a class="file" href="https://youtu.be/vIwAkS9rQEY">2</a></td>
+            <td class="col-size">119MB</td>
+          </tr>
+
+          <tr>
+            <td class="col-sec"><span class="sec">第 3 節</span></td>
+            <td class="col-chap">Chap. 5 - Tree Searching</td>
+            <td class="col-file"><a class="file" href="https://youtu.be/AGWc6SEv37U">3</a></td>
+            <td class="col-size">70MB</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+
+    <div class="table-zone">
+      <table>
+        <thead>
+          <tr>
+            <th class="col-sec">12</th>
+            <th class="col-chap">&nbsp;</th>
+            <th class="col-file">影片連接</th>
+            <th class="col-size">大小</th>
+          </tr>
+        </thead>
+
+        <tbody>
+          <tr>
+            <td class="col-sec"><span class="sec">第 1 節</span></td>
+            <td class="col-chap">Chap. 5 - Tree Searching</td>
+            <td class="col-file"><a class="file" href="https://youtu.be/lCB3lg9fY9o">1</a></td>
+            <td class="col-size">115MB</td>
+          </tr>
+
+          <tr>
+            <td class="col-sec"><span class="sec">第 2 節</span></td>
+            <td class="col-chap">Chap. 7 - Dynamic Programming</td>
+            <td class="col-file"><a class="file" href="https://youtu.be/Wri19pfpl-E">2</a></td>
+            <td class="col-size">119MB</td>
+          </tr>
+
+          <tr>
+            <td class="col-sec"><span class="sec">第 3 節</span></td>
+            <td class="col-chap">ACM Problems</td>
+            <td class="col-file"><a class="file" href="https://youtu.be/AGWc6SEv37U">3</a></td>
+            <td class="col-size">70MB</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+
+    <div class="table-zone">
+      <table>
+        <thead>
+          <tr>
+            <th class="col-sec">13</th>
+            <th class="col-chap">&nbsp;</th>
+            <th class="col-file">影片連接</th>
+            <th class="col-size">大小</th>
+          </tr>
+        </thead>
+
+        <tbody>
+          <tr>
+            <td class="col-sec"><span class="sec">第 1 節</span></td>
+            <td class="col-chap">C/C++/JAVA Library</td>
+            <td class="col-file"><a class="file" href="https://youtu.be/-WQhBen6uZA">1</a></td>
+            <td class="col-size">115MB</td>
+          </tr>
+
+          <tr>
+            <td class="col-sec"><span class="sec">第 2 節</span></td>
+            <td class="col-chap">C/C++/JAVA Library</td>
+            <td class="col-file"><a class="file" href="https://youtu.be/KZPGUvrgJCY">2</a></td>
+            <td class="col-size">119MB</td>
+          </tr>
+
+          <tr>
+            <td class="col-sec"><span class="sec">第 3 節</span></td>
+            <td class="col-chap">ACM Problems</td>
+            <td class="col-file"><a class="file" href="https://youtu.be/Vlh4py-fwjQ">3</a></td>
+            <td class="col-size">70MB</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="table-zone">
+      <table>
+        <thead>
+          <tr>
+            <th class="col-sec">14</th>
+            <th class="col-chap">&nbsp;</th>
+            <th class="col-file">影片連接</th>
+            <th class="col-size">大小</th>
+          </tr>
+        </thead>
+
+        <tbody>
+          <tr>
+            <td class="col-sec"><span class="sec">第 1 節</span></td>
+            <td class="col-chap">Chap. 7 - Dynamic Programming</td>
+            <td class="col-file"><a class="file" href="https://youtu.be/bNqJlcguZao">1</a></td>
+            <td class="col-size">115MB</td>
+          </tr>
+
+          <tr>
+            <td class="col-sec"><span class="sec">第 2 節</span></td>
+            <td class="col-chap">Chap. 7 - Dynamic Programming</td>
+            <td class="col-file"><a class="file" href="https://youtu.be/7z6Gxd-_IHU">2</a></td>
+            <td class="col-size">119MB</td>
+          </tr>
+
+          <tr>
+            <td class="col-sec"><span class="sec">第 3 節</span></td>
+            <td class="col-chap">ACM Problems</td>
+            <td class="col-file"><a class="file" href="https://youtu.be/D8ZnYIe5orE">3</a></td>
+            <td class="col-size">70MB</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+
+    <div class="table-zone">
+      <table>
+        <thead>
+          <tr>
+            <th class="col-sec">15</th>
+            <th class="col-chap">&nbsp;</th>
+            <th class="col-file">影片連接</th>
+            <th class="col-size">大小</th>
+          </tr>
+        </thead>
+
+        <tbody>
+          <tr>
+            <td class="col-sec"><span class="sec">第 1 節</span></td>
+            <td class="col-chap">Chap. 7 - Dynamic Programming</td>
+            <td class="col-file"><a class="file" href="https://youtu.be/YSjrdq-iS-0">1</a></td>
+            <td class="col-size">115MB</td>
+          </tr>
+
+          <tr>
+            <td class="col-sec"><span class="sec">第 2 節</span></td>
+            <td class="col-chap">Chap. 7 - Dynamic Programming</td>
+            <td class="col-file"><a class="file" href="https://youtu.be/e3QLReoUfYQ">2</a></td>
+            <td class="col-size">119MB</td>
+          </tr>
+
+          <tr>
+            <td class="col-sec"><span class="sec">第 3 節</span></td>
+            <td class="col-chap">ACM Problems</td>
+            <td class="col-file"><a class="file" href="https://youtu.be/Sl8XVE1HeF8">3</a></td>
+            <td class="col-size">70MB</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+  </div>
+
+
+  
+</body>
+</html>
